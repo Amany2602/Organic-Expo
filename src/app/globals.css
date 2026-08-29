@@ -1,0 +1,279 @@
+@import "tailwindcss";
+
+@theme {
+  /* ==========================================================================
+     TYPOGRAPHY TOKENS (INTER TIGHT)
+     ========================================================================== */
+  --font-sans: var(--font-inter-tight), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-display: var(--font-inter-tight), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-mono: "JetBrains Mono", Menlo, Consolas, monospace;
+
+  /* ==========================================================================
+     GREENFLOW EXACT COLOR PALETTE
+     ========================================================================== */
+  --color-gf-primary: #2F5138;        /* Deep Forest Green */
+  --color-gf-secondary: #2E7D4F;      /* Emerald CTA / Active */
+  --color-gf-text: #273C30;           /* Dark Pine Body Copy */
+  --color-gf-text-muted: #5A7365;     /* Muted Pine */
+  --color-gf-accent-sage: #6FAF8F;    /* Sage Green */
+  --color-gf-accent-mint: #4FA278;    /* Fresh Mint */
+  --color-gf-bg-tint: #EAF4EC;        /* Pale Mint Surface */
+  --color-gf-bg-warm: #F7F9F6;        /* Warm Neutral Light */
+  --color-gf-border: #E6E8EB;         /* Subtle Hairline Border */
+  --color-gf-border-dark: #3A5543;    /* Dark Card Border */
+  --color-gf-dark: #1A1D1F;           /* Charcoal Dark */
+  --color-gf-peach: #FFBC7D;          /* Apricot Highlight Badge */
+
+  /* Legacy color aliases for backward compatibility */
+  --color-forest-950: #06150e;
+  --color-forest-900: #2F5138;
+  --color-forest-800: #2F5138;
+  --color-forest-700: #2E7D4F;
+  --color-forest-600: #2E7D4F;
+  --color-forest-500: #4FA278;
+  --color-forest-100: #EAF4EC;
+  --color-forest-50: #F7F9F6;
+
+  --color-leaf-700: #2E7D4F;
+  --color-leaf-600: #4FA278;
+  --color-leaf-500: #6FAF8F;
+  --color-leaf-100: #EAF4EC;
+  --color-leaf-50: #F7F9F6;
+
+  --color-charcoal-900: #273C30;
+  --color-charcoal-700: #3B4640;
+  --color-charcoal-600: #5A7365;
+  --color-charcoal-400: #94A199;
+
+  --color-cream-100: #F7F9F6;
+  --color-cream-200: #EAF4EC;
+  --color-cream-300: #E6E8EB;
+
+  --color-harvest-400: #FFBC7D;
+  --color-harvest-500: #FFBC7D;
+
+  /* Radius Tokens */
+  --radius-pill: 9999px;
+  --radius-card: 20px;
+  --radius-sm: 10px;
+}
+
+/* ==========================================================================
+   BASE STYLES & TYPOGRAPHY SPECIFICITY FIX
+   ========================================================================== */
+html {
+  scroll-behavior: smooth;
+  color-scheme: light;
+  background-color: #FFFFFF;
+  color: var(--color-gf-text);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: var(--font-sans);
+  color: var(--color-gf-text);
+  background-color: #FFFFFF;
+  line-height: 1.6;
+}
+
+/* Default Heading styling for light backgrounds */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--color-gf-primary);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+/* CRITICAL CONTRAST FIX: Explicit white override for all dark backgrounds and text-white containers */
+.text-white,
+.text-white h1,
+.text-white h2,
+.text-white h3,
+.text-white h4,
+.text-white h5,
+.text-white h6,
+.gf-card-dark,
+.gf-card-dark h1,
+.gf-card-dark h2,
+.gf-card-dark h3,
+.gf-card-dark h4,
+.gf-card-dark h5,
+.gf-card-dark h6,
+.bg-gf-primary h1,
+.bg-gf-primary h2,
+.bg-gf-primary h3,
+.bg-gf-primary h4,
+.bg-gf-primary h5,
+.bg-gf-primary h6,
+.bg-gf-dark h1,
+.bg-gf-dark h2,
+.bg-gf-dark h3,
+.bg-gf-dark h4,
+.bg-gf-dark h5,
+.bg-gf-dark h6,
+footer h1,
+footer h2,
+footer h3,
+footer h4,
+footer h5,
+footer h6 {
+  color: #FFFFFF !important;
+}
+
+/* ==========================================================================
+   GREENFLOW COMPONENT UTILITIES
+   ========================================================================== */
+
+/* Primary Pill Button */
+.gf-btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 28px;
+  background-color: var(--color-gf-secondary);
+  color: #FFFFFF !important;
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: 9999px;
+  text-decoration: none;
+  transition: all 250ms cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 4px 14px rgba(46, 125, 79, 0.25);
+  cursor: pointer;
+}
+
+.gf-btn-primary:hover {
+  background-color: var(--color-gf-primary);
+  color: #FFFFFF !important;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(47, 81, 56, 0.35);
+}
+
+/* Outline Pill Button */
+.gf-btn-outline {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 28px;
+  background-color: transparent;
+  color: var(--color-gf-primary);
+  border: 1.5px solid var(--color-gf-border);
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: 9999px;
+  text-decoration: none;
+  transition: all 250ms cubic-bezier(0.16, 1, 0.3, 1);
+  cursor: pointer;
+}
+
+.gf-btn-outline:hover {
+  border-color: var(--color-gf-secondary);
+  color: var(--color-gf-secondary);
+  background-color: var(--color-gf-bg-tint);
+  transform: translateY(-2px);
+}
+
+/* White Pill Button on Dark */
+.gf-btn-white {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 28px;
+  background-color: #FFFFFF;
+  color: var(--color-gf-primary) !important;
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: 9999px;
+  text-decoration: none;
+  transition: all 250ms cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+}
+
+.gf-btn-white:hover {
+  background-color: #F7F9F6;
+  color: var(--color-gf-primary) !important;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+}
+
+/* Standard White Bento Card */
+.gf-card {
+  background-color: #FFFFFF;
+  border: 1px solid var(--color-gf-border);
+  border-radius: 20px;
+  transition: all 300ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.gf-card:hover {
+  border-color: var(--color-gf-accent-sage);
+  transform: translateY(-3px);
+  box-shadow: 0 16px 36px rgba(47, 81, 56, 0.08);
+}
+
+/* Dark Green Card */
+.gf-card-dark {
+  background-color: var(--color-gf-primary);
+  border: 1px solid var(--color-gf-border-dark);
+  border-radius: 20px;
+  color: #FFFFFF !important;
+  transition: all 300ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.gf-card-dark:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.25);
+}
+
+/* Eyebrow Pill Badge */
+.gf-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 14px;
+  background-color: var(--color-gf-bg-tint);
+  color: var(--color-gf-secondary);
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border-radius: 9999px;
+  border: 1px solid rgba(46, 125, 79, 0.15);
+}
+
+/* Dynamic Animated Highlight */
+.gf-highlight {
+  position: relative;
+  display: inline-block;
+  color: var(--color-gf-secondary);
+}
+
+.gf-highlight::after {
+  content: "";
+  position: absolute;
+  bottom: 4px;
+  left: 0;
+  right: 0;
+  height: 6px;
+  background-color: rgba(111, 175, 143, 0.3);
+  border-radius: 4px;
+  z-index: -1;
+}
+
+/* Avatar Stack */
+.avatar-stack {
+  display: flex;
+  align-items: center;
+}
+
+.avatar-stack > div {
+  border: 2px solid #FFFFFF;
+  border-radius: 9999px;
+  margin-left: -12px;
+}
+
+.avatar-stack > div:first-child {
+  margin-left: 0;
+}
