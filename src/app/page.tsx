@@ -1,5 +1,4 @@
 import React from "react";
-import { TopBar } from "@/components/layout/TopBar";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { ProductionHero } from "@/components/hero/ProductionHero";
@@ -18,16 +17,13 @@ import { LeadCtaSection } from "@/components/sections/LeadCtaSection";
 
 export default function Home() {
   return (
-    <div className="flex flex-col min-h-screen bg-white text-gf-text">
-      {/* 01. Top Announcement & Utility Bar */}
-      <TopBar />
-
-      {/* 02. Sticky Clean Header Navigation */}
+    <div className="flex flex-col min-h-screen bg-white text-gf-text relative">
+      {/* 01. Floating Transparent Navbar Over Hero (EcoGrow Architecture) */}
       <Header />
 
-      {/* 03. Main Page Stream */}
+      {/* 02. Main Page Stream */}
       <main id="main-content" className="flex-grow flex flex-col">
-        {/* Hero Section: Dynamic Highlight Headline + 3-Photo Staggered Mosaic */}
+        {/* Full-Bleed High-Depth Hero with Lower-Third Massive Typography */}
         <ProductionHero />
 
         {/* Certified Standards & Trust Marquee */}
@@ -67,7 +63,7 @@ export default function Home() {
         <LeadCtaSection />
       </main>
 
-      {/* 04. 4-Column Corporate Footer */}
+      {/* 03. 4-Column Corporate Footer */}
       <Footer />
     </div>
   );
