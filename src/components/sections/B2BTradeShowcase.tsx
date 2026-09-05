@@ -5,21 +5,18 @@ import {
   Sparkles, 
   ArrowRight, 
   FileText, 
-  Package, 
-  ShieldCheck, 
-  Layers, 
-  Droplets, 
-  Flame, 
   Search, 
   Check, 
   Building2, 
   TreePine, 
-  Eye, 
-  Activity, 
+  Droplets,
+  Flame,
+  Layers,
   ArrowUpRight, 
   Zap, 
-  CheckCircle2, 
-  Globe2 
+  Globe2,
+  LayoutGrid,
+  TableProperties
 } from "lucide-react";
 import { B2BRfqModal } from "@/components/ui/B2BRfqModal";
 
@@ -50,68 +47,68 @@ const B2B_PRODUCTS: B2BProduct[] = [
     id: "hemp-hurd",
     name: "Industrial Hempcrete Hurd / Shives (Shiv)",
     category: "hemp-build",
-    categoryLabel: "Eco-Building Materials",
+    categoryLabel: "Eco-Building",
     tagline: "Ultra-absorbent woody core for carbon-negative insulation & hempcrete walls.",
-    terroir: "Janakpur & Mid-Western Belts",
+    terroir: "Janakpur & Mid-West",
     altitude: "150m – 1,200m",
-    annualCapacity: "350 Metric Tons / Year",
-    moq: "1 MT (Baled / Bulk)",
-    packaging: "20kg High-Density Bales / Big Bags",
-    keyMetric: { label: "Carbon Sequestration", value: "-108 kg CO₂/m³", percent: 95 },
+    annualCapacity: "350 MT / Yr",
+    moq: "1 MT Bulk",
+    packaging: "20kg Bales / Big Bags",
+    keyMetric: { label: "Carbon Balance", value: "-108 kg CO₂/m³", percent: 95 },
     specs: [
       { label: "Dust Content", value: "< 2.5% Dedusted" },
       { label: "Particle Size", value: "5mm – 25mm Calibrated" },
       { label: "Moisture Content", value: "< 12% Kiln Dried" },
       { label: "Bulk Density", value: "90 – 120 kg/m³" }
     ],
-    certifications: ["ISO 14001", "ASTM C1177 Tested", "Phytosanitary Clean"],
-    image: "https://images.unsplash.com/photo-1541888946425-d0fbb18086f6?auto=format&fit=crop&w=1200&q=80",
-    badge: "Carbon-Negative Pioneer",
+    certifications: ["ISO 14001", "ASTM C1177", "Phytosanitary Clean"],
+    image: "https://images.unsplash.com/photo-1541888946425-d0fbb18086f6?auto=format&fit=crop&w=800&q=80",
+    badge: "Carbon Negative",
     isPopular: true
   },
   {
     id: "hemp-lime-binder",
     name: "Natural Hydraulic Lime & Hemp Binder",
     category: "hemp-build",
-    categoryLabel: "Eco-Building Materials",
+    categoryLabel: "Eco-Building",
     tagline: "Engineered breathable mineral binder formulated for high-durability hempcrete casting.",
-    terroir: "Chitwan Mineral Formulations",
+    terroir: "Chitwan Minerals",
     altitude: "200m",
-    annualCapacity: "500 Metric Tons / Year",
+    annualCapacity: "500 MT / Yr",
     moq: "2 MT",
-    packaging: "25kg Multi-Wall Moisture-Proof Bags",
-    keyMetric: { label: "Hydraulic Strength", value: "NHL 3.5 Grade", percent: 88 },
+    packaging: "25kg Multi-Wall Bags",
+    keyMetric: { label: "Strength", value: "NHL 3.5 Grade", percent: 88 },
     specs: [
       { label: "Compressive Strength", value: "NHL 3.5 Grade" },
-      { label: "Curing Phase", value: "Vapor Permeable Setting" },
+      { label: "Curing Phase", value: "Vapor Permeable" },
       { label: "Free Lime (Ca(OH)₂)", value: "> 25% Active" },
-      { label: "VOC Emissions", value: "Zero (A+ Indoor Air Grade)" }
+      { label: "VOC Emissions", value: "Zero (A+ Indoor Grade)" }
     ],
-    certifications: ["EN 459-1 European Standard", "Green Building Council Verified"],
-    image: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1200&q=80",
+    certifications: ["EN 459-1 European Std", "Green Building Verified"],
+    image: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=800&q=80",
     badge: "Architectural Grade"
   },
   {
     id: "hemp-bamboo-panels",
     name: "Hemp-Bamboo Bio-Composite Boards",
     category: "hemp-build",
-    categoryLabel: "Eco-Building Materials",
+    categoryLabel: "Eco-Building",
     tagline: "Rigid non-toxic interior walling & sound-absorbing structural panels.",
-    terroir: "Janakpur Innovation Workshop",
-    altitude: "Regional Processing",
-    annualCapacity: "15,000 Panels / Year",
-    moq: "100 Panels (2.4m x 1.2m)",
-    packaging: "Palletized & Edge-Protected Crates",
-    keyMetric: { label: "Acoustic Absorption", value: "NRC 0.75", percent: 82 },
+    terroir: "Janakpur Workshop",
+    altitude: "Regional Hub",
+    annualCapacity: "15,000 Pcs / Yr",
+    moq: "100 Panels",
+    packaging: "Palletized Crates",
+    keyMetric: { label: "Acoustic", value: "NRC 0.75 Rating", percent: 82 },
     specs: [
       { label: "Density", value: "450 - 600 kg/m³" },
       { label: "Thermal Conductivity", value: "0.065 W/mK" },
       { label: "Binder System", value: "Zero-Formaldehyde Bio-Resin" },
-      { label: "Fire Rating", value: "Class B-s1, d0 Fire Retardant" }
+      { label: "Fire Rating", value: "Class B-s1, d0" }
     ],
-    certifications: ["FSC Certified Bamboo", "LEED Point Eligible"],
-    image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80",
-    badge: "Eco Interior Design"
+    certifications: ["FSC Bamboo", "LEED Eligible"],
+    image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80",
+    badge: "Eco Interior"
   },
 
   // =========================================================================
@@ -121,22 +118,22 @@ const B2B_PRODUCTS: B2BProduct[] = [
     id: "cold-pressed-hemp-oil",
     name: "Virgin Cold-Pressed Hemp Seed Oil",
     category: "wellness-oils",
-    categoryLabel: "Nutraceutical & Wellness",
-    tagline: "100% unrefined golden-emerald oil with the optimal 3:1 Omega-6 to Omega-3 ratio.",
-    terroir: "Western Himalayan Foothills",
+    categoryLabel: "Nutraceutical",
+    tagline: "100% unrefined golden-emerald oil with optimal 3:1 Omega-6 to Omega-3 ratio.",
+    terroir: "Western Foothills",
     altitude: "800m – 1,800m",
-    annualCapacity: "60,000 Liters / Year",
-    moq: "25 Liters (HDPE Drum / Food Grade)",
-    packaging: "25L Carboys, 200L Steel Drums, or Custom Dark Glass Bottles",
-    keyMetric: { label: "Omega 3-6-9 Ratio", value: "3 : 1 Golden Ratio", percent: 96 },
+    annualCapacity: "60,000 L / Yr",
+    moq: "25 L Drum",
+    packaging: "25L Carboys / 200L Steel Drums",
+    keyMetric: { label: "Omega 3-6-9", value: "3 : 1 Golden Ratio", percent: 96 },
     specs: [
       { label: "Extraction", value: "First Cold-Press (<40°C)" },
       { label: "Omega Profile", value: "LA 55%, ALA 20%, GLA 3.5%" },
-      { label: "THC / CBD Content", value: "0.00% (Non-Psychoactive)" },
+      { label: "THC / CBD", value: "0.00% (Non-Psychoactive)" },
       { label: "Peroxide Value", value: "< 4.0 meq O₂/kg" }
     ],
-    certifications: ["EU Bio Organic", "USDA NOP Compliant", "ISO 22000 / HACCP", "GC/MS Certified"],
-    image: "https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?auto=format&fit=crop&w=1200&q=80",
+    certifications: ["EU Bio Organic", "USDA NOP", "ISO 22000", "GC/MS Certified"],
+    image: "https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?auto=format&fit=crop&w=800&q=80",
     badge: "Nutraceutical Grade",
     isPopular: true
   },
@@ -144,45 +141,45 @@ const B2B_PRODUCTS: B2BProduct[] = [
     id: "hemp-protein-powder",
     name: "50% Raw Organic Hemp Protein Powder",
     category: "wellness-oils",
-    categoryLabel: "Nutraceutical & Wellness",
-    tagline: "Water-soluble, cold-milled plant protein with all 9 essential amino acids & edestin.",
-    terroir: "Highland Organic Farms",
+    categoryLabel: "Nutraceutical",
+    tagline: "Water-soluble, cold-milled plant protein with all 9 essential amino acids.",
+    terroir: "Highland Organic",
     altitude: "1,200m – 2,200m",
-    annualCapacity: "80 Metric Tons / Year",
+    annualCapacity: "80 MT / Yr",
     moq: "100 kg",
-    packaging: "20kg Multi-Ply Foil-Lined Vacuum Bags",
-    keyMetric: { label: "Plant Protein Purity", value: "50.5% Dry Matter", percent: 90 },
+    packaging: "20kg Vacuum Bags",
+    keyMetric: { label: "Protein Purity", value: "50.5% Dry Matter", percent: 90 },
     specs: [
       { label: "Protein Content", value: "50.5% Dry Matter" },
       { label: "Dietary Fiber", value: "18% Prebiotic Fiber" },
-      { label: "Digestibility", value: "92% Protein Digestibility" },
+      { label: "Digestibility", value: "92% Digestibility" },
       { label: "Heavy Metals", value: "Eurofins Clean Passed" }
     ],
-    certifications: ["100% Vegan / Non-GMO", "Gluten-Free Certified", "USDA Organic"],
-    image: "https://images.unsplash.com/photo-1579722821273-0f6c7d44362f?auto=format&fit=crop&w=1200&q=80",
+    certifications: ["100% Vegan / Non-GMO", "Gluten-Free", "USDA Organic"],
+    image: "https://images.unsplash.com/photo-1579722821273-0f6c7d44362f?auto=format&fit=crop&w=800&q=80",
     badge: "Clean Label"
   },
   {
     id: "hulled-hemp-hearts",
     name: "Hulled Himalayan Hemp Hearts (Seeds)",
     category: "wellness-oils",
-    categoryLabel: "Nutraceutical & Wellness",
-    tagline: "Soft, buttery, ready-to-eat organic superfood packed with zinc, magnesium & protein.",
-    terroir: "Karnali & Gandaki Belts",
+    categoryLabel: "Nutraceutical",
+    tagline: "Soft, buttery, ready-to-eat organic superfood packed with zinc & magnesium.",
+    terroir: "Karnali Belts",
     altitude: "1,500m",
-    annualCapacity: "100 Metric Tons / Year",
+    annualCapacity: "100 MT / Yr",
     moq: "200 kg",
-    packaging: "25kg Vacuum Sealed Nitrogen-Flushed Sacks",
+    packaging: "25kg Vacuum Sacks",
     keyMetric: { label: "Dehulled Purity", value: "99.9% Cleaned", percent: 99 },
     specs: [
       { label: "Purity Grade", value: "99.9% Dehulled" },
       { label: "Protein Density", value: "33g per 100g" },
       { label: "Moisture Content", value: "< 7.5%" },
-      { label: "Shelf Life", value: "18 Months Vacuum Stored" }
+      { label: "Shelf Life", value: "18 Mos Vacuum Stored" }
     ],
-    certifications: ["EU Organic Verified", "BRC Food Certified", "Kosher / Halal Ready"],
-    image: "https://images.unsplash.com/photo-1586201375761-83865001e31c?auto=format&fit=crop&w=1200&q=80",
-    badge: "Superfood Export"
+    certifications: ["EU Organic", "BRC Food Certified", "Kosher Ready"],
+    image: "https://images.unsplash.com/photo-1586201375761-83865001e31c?auto=format&fit=crop&w=800&q=80",
+    badge: "Superfood"
   },
 
   // =========================================================================
@@ -192,13 +189,13 @@ const B2B_PRODUCTS: B2BProduct[] = [
     id: "raw-hemp-fiber",
     name: "Raw Degummed Hemp Bast Fiber",
     category: "fibers-textiles",
-    categoryLabel: "Sustainable Fibers & Textiles",
-    tagline: "Extra-long natural organic bast fiber with exceptional tensile strength for yarn & composites.",
-    terroir: "Bajhang, Rukum & Rolpa",
+    categoryLabel: "Sustainable Fibers",
+    tagline: "Extra-long organic bast fiber with exceptional tensile strength for yarn & composites.",
+    terroir: "Bajhang & Rukum",
     altitude: "1,800m – 2,600m",
-    annualCapacity: "120 Metric Tons / Year",
+    annualCapacity: "120 MT / Yr",
     moq: "500 kg",
-    packaging: "100kg High-Pressure Compressed Bales",
+    packaging: "100kg Compressed Bales",
     keyMetric: { label: "Tensile Strength", value: "850 MPa Peak", percent: 94 },
     specs: [
       { label: "Fiber Length", value: "700mm – 1,400mm" },
@@ -206,54 +203,54 @@ const B2B_PRODUCTS: B2BProduct[] = [
       { label: "Lignin Content", value: "< 3.5% Degummed" },
       { label: "Eco Impact", value: "Zero Chemical Retting" }
     ],
-    certifications: ["GOTS Organic Certified", "OEKO-TEX Standard 100", "Fair Trade"],
-    image: "https://images.unsplash.com/photo-1594824813590-7856b3e34b7f?auto=format&fit=crop&w=1200&q=80",
-    badge: "Circular Textile",
+    certifications: ["GOTS Organic", "OEKO-TEX 100", "Fair Trade"],
+    image: "https://images.unsplash.com/photo-1594824813590-7856b3e34b7f?auto=format&fit=crop&w=800&q=80",
+    badge: "Circular Fiber",
     isPopular: true
   },
   {
     id: "handwoven-hemp-canvas",
     name: "Handwoven Pure Hemp Fabric & Canvas",
     category: "fibers-textiles",
-    categoryLabel: "Sustainable Fibers & Textiles",
-    tagline: "Durable, anti-microbial, breathable organic textile for sustainable apparel & luggage.",
-    terroir: "Janakpur & Baglung Artisans",
+    categoryLabel: "Sustainable Textiles",
+    tagline: "Durable, anti-microbial organic textile for sustainable fashion & luggage.",
+    terroir: "Janakpur & Baglung",
     altitude: "Artisan Co-ops",
-    annualCapacity: "45,000 Meters / Year",
-    moq: "200 Meters (Roll Form)",
-    packaging: "50m Rolls Wrapped in Waterproof Eco-Packaging",
+    annualCapacity: "45,000 M / Yr",
+    moq: "200 Meters",
+    packaging: "50m Eco Rolls",
     keyMetric: { label: "Fabric Density", value: "450 GSM Heavy Duck", percent: 88 },
     specs: [
-      { label: "Fabric Weight (GSM)", value: "280 – 450 GSM" },
-      { label: "Weave Type", value: "Plain / Twill / Heavy Duck Canvas" },
-      { label: "Dye Options", value: "Natural Herbal Dye / Unbleached" },
+      { label: "Fabric Weight", value: "280 – 450 GSM" },
+      { label: "Weave Type", value: "Plain / Twill / Heavy Duck" },
+      { label: "Dye Options", value: "Herbal Dye / Unbleached" },
       { label: "Durability", value: "3x Stronger than Cotton" }
     ],
     certifications: ["Fair Trade Forum Nepal", "Craftmark Authenticated"],
-    image: "https://images.unsplash.com/photo-1528459801416-a9e53bbf4e17?auto=format&fit=crop&w=1200&q=80",
+    image: "https://images.unsplash.com/photo-1528459801416-a9e53bbf4e17?auto=format&fit=crop&w=800&q=80",
     badge: "Artisan B2B"
   },
   {
     id: "hemp-lokta-paper",
     name: "Tree-Free Hemp & Lokta Seed Paper",
     category: "fibers-textiles",
-    categoryLabel: "Sustainable Fibers & Textiles",
-    tagline: "Heritage Nepalese paper crafted from wild Daphne bush & hemp pulp for luxury eco-packaging.",
-    terroir: "Parbat & Dolakha Mountain Mills",
+    categoryLabel: "Eco-Packaging",
+    tagline: "Heritage Nepalese paper crafted from wild Daphne & hemp pulp for luxury boxes.",
+    terroir: "Parbat Mountain Mills",
     altitude: "2,000m – 3,000m",
-    annualCapacity: "100,000 Sheets / Year",
-    moq: "1,000 Sheets (Custom Girth & GSM)",
-    packaging: "Reinforced Pallet Packs with Moisture Barrier",
-    keyMetric: { label: "Natural Longevity", value: "Acid-Free 500+ Yrs", percent: 98 },
+    annualCapacity: "100,000 Sheets / Yr",
+    moq: "1,000 Sheets",
+    packaging: "Pallet Moisture Packs",
+    keyMetric: { label: "Longevity", value: "Acid-Free 500+ Yrs", percent: 98 },
     specs: [
       { label: "Weight Range", value: "40 GSM to 300 GSM" },
-      { label: "Composition", value: "50% Wild Lokta + 50% Hemp Fiber" },
-      { label: "Insect Resistance", value: "Natural Non-Rotting Fibers" },
-      { label: "Special Finishes", value: "Botanical Petals / Plantable Wildflower Seeds" }
+      { label: "Composition", value: "50% Lokta + 50% Hemp" },
+      { label: "Insect Resistance", value: "Natural Non-Rotting" },
+      { label: "Finishes", value: "Plantable Wildflower Seeds" }
     ],
-    certifications: ["Zero Deforestation", "Nepal Handicrafts Council Approved"],
-    image: "https://images.unsplash.com/photo-1586075010923-2dd4570fb338?auto=format&fit=crop&w=1200&q=80",
-    badge: "Tree-Free Packaging"
+    certifications: ["Zero Deforestation", "Handicrafts Council Approved"],
+    image: "https://images.unsplash.com/photo-1586075010923-2dd4570fb338?auto=format&fit=crop&w=800&q=80",
+    badge: "Tree-Free"
   },
 
   // =========================================================================
@@ -263,14 +260,14 @@ const B2B_PRODUCTS: B2BProduct[] = [
     id: "mustang-timur",
     name: "Wild Mustang Timur Pepper (Sichuan Pepper)",
     category: "spices-botanicals",
-    categoryLabel: "Himalayan Spices & Botanicals",
-    tagline: "Intense citrus-grapefruit aroma and electric tingling sensation with high sanshool potency.",
-    terroir: "Mustang & Myagdi Districts",
+    categoryLabel: "Himalayan Spices",
+    tagline: "Intense citrus-grapefruit aroma and electric tingling sensation with high sanshool.",
+    terroir: "Mustang & Myagdi",
     altitude: "2,100m – 2,800m",
-    annualCapacity: "80 Metric Tons / Year",
-    moq: "100 kg (Whole Dried Berries)",
-    packaging: "25kg Multi-Layer Vacuum Sealed Kraft Bags",
-    keyMetric: { label: "Bio-Active Sanshool", value: "> 4.5% Potency", percent: 92 },
+    annualCapacity: "80 MT / Yr",
+    moq: "100 kg",
+    packaging: "25kg Vacuum Kraft Sacks",
+    keyMetric: { label: "Sanshool Potency", value: "> 4.5% Active", percent: 92 },
     specs: [
       { label: "Active Compound", value: "Hydroxy-α-sanshool > 4.5%" },
       { label: "Essential Oil Content", value: "3.8% – 5.2% v/w" },
@@ -278,7 +275,7 @@ const B2B_PRODUCTS: B2BProduct[] = [
       { label: "Purity Grade", value: "Stem-Cleaned (Grade AAA)" }
     ],
     certifications: ["EU Bio Certified", "USDA Organic", "Pesticide Screened"],
-    image: "https://images.unsplash.com/photo-1599940824399-b87987ceb72a?auto=format&fit=crop&w=1200&q=80",
+    image: "https://images.unsplash.com/photo-1599940824399-b87987ceb72a?auto=format&fit=crop&w=800&q=80",
     badge: "Signature Terroir",
     isPopular: true
   },
@@ -286,57 +283,57 @@ const B2B_PRODUCTS: B2BProduct[] = [
     id: "large-black-cardamom",
     name: "Taplejung Large Black Cardamom (Alaichi)",
     category: "spices-botanicals",
-    categoryLabel: "Himalayan Spices & Botanicals",
-    tagline: "Smokeless kiln-dried jumbo pods boasting sweet camphoraceous and warming resinous notes.",
-    terroir: "Taplejung & Ilam Himalayan Slopes",
+    categoryLabel: "Himalayan Spices",
+    tagline: "Smokeless kiln-dried jumbo pods boasting sweet camphoraceous and resinous notes.",
+    terroir: "Taplejung & Ilam",
     altitude: "1,400m – 2,100m",
-    annualCapacity: "150 Metric Tons / Year",
+    annualCapacity: "150 MT / Yr",
     moq: "500 kg",
-    packaging: "50kg Jute Bags with Poly Liner",
-    keyMetric: { label: "1,8-Cineole Content", value: "38% Volatile Oil", percent: 89 },
+    packaging: "50kg Jute Sacks + Liner",
+    keyMetric: { label: "1,8-Cineole", value: "38% Volatile Oil", percent: 89 },
     specs: [
       { label: "1,8-Cineole Content", value: "32% – 38% in Volatile Oil" },
       { label: "Pod Size", value: "22mm – 28mm (Jumbo Tail-Cut)" },
-      { label: "Drying Technology", value: "Improved Smokeless Bhattis" },
+      { label: "Drying Tech", value: "Improved Smokeless Bhattis" },
       { label: "Foreign Matter", value: "< 0.5%" }
     ],
     certifications: ["Spices Board Grade 1", "Phytosanitary Clean", "USDA Organic"],
-    image: "https://images.unsplash.com/photo-1509358271058-acd22cc93898?auto=format&fit=crop&w=1200&q=80",
-    badge: "Top Commercial Spice"
+    image: "https://images.unsplash.com/photo-1509358271058-acd22cc93898?auto=format&fit=crop&w=800&q=80",
+    badge: "Top Commercial"
   },
   {
     id: "himalayan-shilajit",
     name: "Purified Himalayan Shilajit Gold Grade Resin",
     category: "spices-botanicals",
-    categoryLabel: "Himalayan Spices & Botanicals",
-    tagline: "Mineral-rich bio-active biomass harvested from cliffs above 4,500m and purified with spring water.",
-    terroir: "Dolpa & Humla High Himalayas",
+    categoryLabel: "Bio-Active Botanicals",
+    tagline: "Mineral-rich bio-active biomass harvested from cliffs above 4,500m.",
+    terroir: "Dolpa & Humla",
     altitude: "4,500m – 5,200m",
-    annualCapacity: "15 Metric Tons / Year",
-    moq: "10 kg (Bulk Resin or Standardized Powder)",
-    packaging: "5kg Food-Grade Stainless Tins / Heavy-Duty Sealed Jars",
+    annualCapacity: "15 MT / Yr",
+    moq: "10 kg",
+    packaging: "5kg Stainless Tins / Jars",
     keyMetric: { label: "Fulvic Acid Assay", value: "> 62% Standardized", percent: 97 },
     specs: [
       { label: "Fulvic Acid", value: "> 62% Standardized (HPLC)" },
       { label: "Humic Acid", value: "> 14%" },
-      { label: "Ionic Trace Minerals", value: "85+ Ionic Minerals" },
-      { label: "Heavy Metal Screen", value: "Eurofins Lead/Mercury Passed" }
+      { label: "Ionic Minerals", value: "85+ Ionic Minerals" },
+      { label: "Heavy Metal Screen", value: "Eurofins Passed" }
     ],
-    certifications: ["Ayurvedic GMP Certified", "Heavy Metal Lab Tested", "EU/US Lab COA"],
-    image: "https://images.unsplash.com/photo-1615485290382-441e4d049cb5?auto=format&fit=crop&w=1200&q=80",
-    badge: "Ultra-High Purity"
+    certifications: ["Ayurvedic GMP", "Heavy Metal Tested", "EU/US Lab COA"],
+    image: "https://images.unsplash.com/photo-1615485290382-441e4d049cb5?auto=format&fit=crop&w=800&q=80",
+    badge: "Ultra-Pure"
   },
   {
     id: "wintergreen-essential-oil",
-    name: "Steam-Distilled Pure Wintergreen Essential Oil",
+    name: "Steam-Distilled Pure Wintergreen Oil",
     category: "spices-botanicals",
-    categoryLabel: "Himalayan Spices & Botanicals",
-    tagline: "Wild-harvested Gaultheria fragrantissima distillate rich in natural methyl salicylate for pain therapies.",
-    terroir: "Dolakha & Sindhupalchok",
+    categoryLabel: "Essential Distillates",
+    tagline: "Wild Gaultheria fragrantissima distillate rich in natural methyl salicylate.",
+    terroir: "Dolakha Slopes",
     altitude: "2,200m – 2,800m",
-    annualCapacity: "25,000 Kilograms / Year",
-    moq: "25 kg (UN Certified Aluminum Flacon / Drum)",
-    packaging: "25kg Food/Pharma Grade Aluminum Drums",
+    annualCapacity: "25,000 kg / Yr",
+    moq: "25 kg",
+    packaging: "25kg Aluminum Drums",
     keyMetric: { label: "Methyl Salicylate", value: "98.5% GC/MS Pure", percent: 99 },
     specs: [
       { label: "Methyl Salicylate", value: "> 98.2% (GC/MS Pure)" },
@@ -344,8 +341,8 @@ const B2B_PRODUCTS: B2BProduct[] = [
       { label: "Optical Rotation", value: "-0.5° to -1.5°" },
       { label: "Flash Point", value: "96°C" }
     ],
-    certifications: ["100% Pure & Natural IFRA Compliant", "ISO 9001:2015", "EU Cosmetic Reg. CPNP"],
-    image: "https://images.unsplash.com/photo-1608686207856-001b95cf60ca?auto=format&fit=crop&w=1200&q=80",
+    certifications: ["100% Pure IFRA Compliant", "ISO 9001:2015", "EU CPNP"],
+    image: "https://images.unsplash.com/photo-1608686207856-001b95cf60ca?auto=format&fit=crop&w=800&q=80",
     badge: "Pharma Grade"
   },
 
@@ -356,108 +353,108 @@ const B2B_PRODUCTS: B2BProduct[] = [
     id: "orthodox-white-tea",
     name: "Ilam Highland Orthodox White Needle Tea",
     category: "tea-superfoods",
-    categoryLabel: "Specialty Tea & Coffee",
-    tagline: "Delicate silvery unopened tea buds hand-plucked during the spring first flush at 2,150m.",
-    terroir: "Ilam Single-Estate Slopes",
+    categoryLabel: "Specialty Tea",
+    tagline: "Silvery unopened tea buds hand-plucked during spring first flush at 2,150m.",
+    terroir: "Ilam Single-Estate",
     altitude: "2,150m",
-    annualCapacity: "20 Metric Tons / Year",
+    annualCapacity: "20 MT / Yr",
     moq: "50 kg",
-    packaging: "20kg Foil-Lined Moisture-Barrier Wooden Chests",
-    keyMetric: { label: "Antioxidant Polyphenols", value: "> 22% Active", percent: 91 },
+    packaging: "20kg Wooden Chests",
+    keyMetric: { label: "Polyphenols", value: "> 22% Active", percent: 91 },
     specs: [
-      { label: "Flush Season", value: "Spring First Flush (March-April)" },
+      { label: "Flush Season", value: "Spring First Flush" },
       { label: "Polyphenol Content", value: "> 22% Active Antioxidants" },
-      { label: "Cup Character", value: "Honeysuckle, White Peach & Alpine Dew" },
-      { label: "Leaf Grade", value: "Silver Tips / Imperial White" }
+      { label: "Cup Character", value: "Honeysuckle & White Peach" },
+      { label: "Leaf Grade", value: "Silver Tips / Imperial" }
     ],
-    certifications: ["EU Bio Certified", "USDA Organic", "JAS Japan Organic"],
-    image: "https://images.unsplash.com/photo-1576092768241-dec231879fc3?auto=format&fit=crop&w=1200&q=80",
+    certifications: ["EU Bio Certified", "USDA Organic", "JAS Japan"],
+    image: "https://images.unsplash.com/photo-1576092768241-dec231879fc3?auto=format&fit=crop&w=800&q=80",
     badge: "Master Reserve",
     isPopular: true
   },
   {
     id: "arabica-coffee",
-    name: "Specialty Shade-Grown Arabica Green Coffee Beans",
+    name: "Specialty Shade-Grown Arabica Coffee",
     category: "tea-superfoods",
-    categoryLabel: "Specialty Tea & Coffee",
-    tagline: "Glacier-fed micro-lot specialty Arabica grown under native fruit tree canopies with exceptional acidity.",
-    terroir: "Nuwakot & Lalitpur High Valleys",
+    categoryLabel: "Specialty Coffee",
+    tagline: "Glacier-fed micro-lot Arabica grown under native fruit canopies.",
+    terroir: "Nuwakot High Valley",
     altitude: "1,400m – 1,750m",
-    annualCapacity: "45 Metric Tons / Year",
-    moq: "500 kg (Green Unroasted Beans)",
-    packaging: "60kg GrainPro Hermetic Bags inside Jute Sacks",
-    keyMetric: { label: "SCA Specialty Score", value: "86.5+ Points Cupping", percent: 87 },
+    annualCapacity: "45 MT / Yr",
+    moq: "500 kg",
+    packaging: "60kg GrainPro Sacks",
+    keyMetric: { label: "SCA Score", value: "86.5+ Cupping", percent: 87 },
     specs: [
       { label: "SCA Specialty Score", value: "86.5+ Points Cupping" },
-      { label: "Processing Method", value: "Fully Washed & Natural Sun-Dried" },
-      { label: "Varietal", value: "Bourbon & Typica Micro-lot" },
-      { label: "Moisture Level", value: "10.5% – 11.5% Stabilized" }
+      { label: "Processing Method", value: "Fully Washed & Sun-Dried" },
+      { label: "Varietal", value: "Bourbon & Typica" },
+      { label: "Moisture Level", value: "10.5% – 11.5%" }
     ],
-    certifications: ["Rainforest Alliance Compatible", "Specialty Coffee Assoc. Certified"],
-    image: "https://images.unsplash.com/photo-1559525839-b184a4d698c7?auto=format&fit=crop&w=1200&q=80",
-    badge: "SCA 86.5+ Specialty"
+    certifications: ["Rainforest Compatible", "SCA Specialty Certified"],
+    image: "https://images.unsplash.com/photo-1559525839-b184a4d698c7?auto=format&fit=crop&w=800&q=80",
+    badge: "SCA 86.5+"
   },
   {
     id: "annapurna-cliff-honey",
     name: "Raw Annapurna Cliff Honey (Mad Honey)",
     category: "tea-superfoods",
-    categoryLabel: "Himalayan Superfoods",
-    tagline: "Rare crimson wild honey harvested from Himalayan cliff faces of Apis laboriosa with natural bio-activity.",
-    terroir: "Lamjung & Annapurna Glades",
+    categoryLabel: "Superfood",
+    tagline: "Rare wild crimson honey harvested from Himalayan cliff faces of Apis laboriosa.",
+    terroir: "Lamjung Glades",
     altitude: "2,500m – 3,500m",
-    annualCapacity: "12 Metric Tons / Year",
-    moq: "50 kg (Bulk Drums / Sealed Jars)",
-    packaging: "Food-Grade 25kg Sealed Drums or 500g Glass Jars",
-    keyMetric: { label: "Bioactive Grayanotoxin", value: "Standardized Lab COA", percent: 93 },
+    annualCapacity: "12 MT / Yr",
+    moq: "50 kg",
+    packaging: "25kg Food Drums / Jars",
+    keyMetric: { label: "Grayanotoxin", value: "Standardized Assay", percent: 93 },
     specs: [
-      { label: "Floral Source", value: "Wild Rhododendron arboreum" },
-      { label: "Grayanotoxin Level", value: "Lab Standardized (Eurofins Report)" },
-      { label: "Purity State", value: "Raw Unheated / Unpasteurized" },
+      { label: "Floral Source", value: "Wild Rhododendron" },
+      { label: "Grayanotoxin Level", value: "Eurofins Lab Report" },
+      { label: "Purity State", value: "Raw Unheated" },
       { label: "Diastase Activity", value: "> 18 DN Units" }
     ],
-    certifications: ["Wild Harvest Certificate", "DNA Authenticated", "Phytosanitary Approved"],
-    image: "https://images.unsplash.com/photo-1587049352846-4a222e784d38?auto=format&fit=crop&w=1200&q=80",
-    badge: "Rare Himalayan Jewel"
+    certifications: ["Wild Harvest Cert", "DNA Authenticated", "Phytosanitary Clean"],
+    image: "https://images.unsplash.com/photo-1587049352846-4a222e784d38?auto=format&fit=crop&w=800&q=80",
+    badge: "Rare Harvest"
   },
   {
     id: "jumla-marsi-rice",
-    name: "Jumla Marsi Red Rice & Tartary Buckwheat",
+    name: "Jumla Marsi Red Rice & Buckwheat",
     category: "tea-superfoods",
-    categoryLabel: "Himalayan Superfoods",
-    tagline: "World’s highest-altitude rice and heirloom tartary buckwheat packed with rutin and slow-release energy.",
-    terroir: "Jumla Valley Terroir",
+    categoryLabel: "Heritage Grains",
+    tagline: "World’s highest-altitude rice and heirloom tartary buckwheat packed with rutin.",
+    terroir: "Jumla Valley",
     altitude: "2,600m – 3,000m",
-    annualCapacity: "90 Metric Tons / Year",
-    moq: "1 Metric Ton",
-    packaging: "25kg Multi-Ply Poly-Lined Export Sacks",
-    keyMetric: { label: "Rutin Flavonoid Assay", value: "1,500 mg / 100g", percent: 89 },
+    annualCapacity: "90 MT / Yr",
+    moq: "1 MT",
+    packaging: "25kg Multi-Ply Sacks",
+    keyMetric: { label: "Rutin Flavonoid", value: "1,500 mg / 100g", percent: 89 },
     specs: [
       { label: "Glycemic Index", value: "Low GI (54)" },
-      { label: "Anthocyanin Content", value: "Rich Natural Pigmentation" },
-      { label: "Rutin Concentration", value: "Tartary Buckwheat > 1,500mg/100g" },
-      { label: "Irrigation", value: "Pure Glacial Meltwater" }
+      { label: "Anthocyanin Content", value: "Rich Natural Red" },
+      { label: "Rutin Concentration", value: "> 1,500mg/100g" },
+      { label: "Irrigation", value: "Pure Glacial Water" }
     ],
-    certifications: ["Geographical Indication (GI) Nepal", "100% Pesticide Free"],
-    image: "https://images.unsplash.com/photo-1536304929831-ee1ca9d44906?auto=format&fit=crop&w=1200&q=80",
-    badge: "Heritage High-Altitude"
+    certifications: ["GI Tag Nepal", "100% Pesticide Free"],
+    image: "https://images.unsplash.com/photo-1536304929831-ee1ca9d44906?auto=format&fit=crop&w=800&q=80",
+    badge: "Heritage"
   }
 ];
 
 const CATEGORIES = [
-  { id: "all", label: "All Commodities & Raw Materials", icon: Layers, count: B2B_PRODUCTS.length },
-  { id: "hemp-build", label: "Industrial Hemp & Eco-Building", icon: Building2, count: 3 },
-  { id: "wellness-oils", label: "Hemp Wellness & Cold-Pressed Oils", icon: Droplets, count: 3 },
-  { id: "fibers-textiles", label: "Sustainable Fibers & Textiles", icon: TreePine, count: 3 },
-  { id: "spices-botanicals", label: "Spices & Bio-Active Botanicals", icon: Flame, count: 4 },
-  { id: "tea-superfoods", label: "Specialty Teas, Coffee & Superfoods", icon: Sparkles, count: 4 }
+  { id: "all", label: "All Commodities", icon: Layers, count: B2B_PRODUCTS.length },
+  { id: "hemp-build", label: "Industrial Hemp & Building", icon: Building2, count: 3 },
+  { id: "wellness-oils", label: "Hemp Oils & Wellness", icon: Droplets, count: 3 },
+  { id: "fibers-textiles", label: "Fibers & Textiles", icon: TreePine, count: 3 },
+  { id: "spices-botanicals", label: "Spices & Botanicals", icon: Flame, count: 4 },
+  { id: "tea-superfoods", label: "Teas & Superfoods", icon: Sparkles, count: 4 }
 ];
 
 export function B2BTradeShowcase() {
   const [activeCategory, setActiveCategory] = useState("all");
   const [searchQuery, setSearchQuery] = useState("");
+  const [viewMode, setViewMode] = useState<"bento" | "table">("bento");
   const [selectedProductForModal, setSelectedProductForModal] = useState<string | undefined>(undefined);
   const [isRfqModalOpen, setIsRfqModalOpen] = useState(false);
-  const [expandedCardId, setExpandedCardId] = useState<string | null>(null);
 
   // Filter products based on category and search query
   const filteredProducts = B2B_PRODUCTS.filter((product) => {
@@ -475,21 +472,17 @@ export function B2BTradeShowcase() {
     setIsRfqModalOpen(true);
   };
 
-  const toggleExpandCard = (id: string) => {
-    setExpandedCardId(expandedCardId === id ? null : id);
-  };
-
   return (
-    <section id="export-catalog" className="py-24 lg:py-32 bg-[#F9FBF8] border-t border-gf-border relative overflow-hidden">
+    <section id="export-catalog" className="py-16 lg:py-24 bg-[#F9FBF8] border-t border-gf-border relative overflow-hidden">
       
-      {/* Decorative Luxury Background Glows */}
-      <div className="absolute top-0 left-1/4 w-[600px] h-[600px] bg-emerald-100/40 rounded-full blur-[140px] pointer-events-none -z-0" />
-      <div className="absolute bottom-1/3 right-0 w-[500px] h-[500px] bg-amber-100/30 rounded-full blur-[140px] pointer-events-none -z-0" />
+      {/* Ambient Background Accents */}
+      <div className="absolute top-0 left-1/3 w-[500px] h-[500px] bg-emerald-100/35 rounded-full blur-[130px] pointer-events-none -z-0" />
+      <div className="absolute bottom-10 right-0 w-[400px] h-[400px] bg-amber-100/25 rounded-full blur-[130px] pointer-events-none -z-0" />
 
       {/* =========================================================================
           1. LIVE B2B COMMODITY ASSAY & EXPORT TICKER MARQUEE
           ========================================================================= */}
-      <div className="w-full bg-[#183B2B] text-white py-3 border-y border-emerald-800/40 overflow-hidden relative shadow-inner mb-14">
+      <div className="w-full bg-[#183B2B] text-white py-2.5 border-y border-emerald-800/40 overflow-hidden relative shadow-inner mb-10">
         <div className="flex items-center gap-8 animate-marquee whitespace-nowrap">
           {[
             "🌿 Hempcrete Hurd: 350 MT Annual Yield · Kiln-Dried & Dedusted",
@@ -506,73 +499,96 @@ export function B2BTradeShowcase() {
             "🌶️ Wild Mustang Timur Pepper: Hydroxy-α-sanshool > 4.5% · Grade AAA",
             "☕ Ilam Highland White Needle Tea: First Flush Reserve · 2,150m Glacial Terroir",
           ]).map((item, idx) => (
-            <div key={idx} className="inline-flex items-center gap-3 text-xs font-mono font-medium tracking-wide">
+            <div key={idx} className="inline-flex items-center gap-2.5 text-xs font-mono font-medium tracking-wide">
               <span className="text-gf-peach font-bold">●</span>
               <span className="text-gray-100">{item}</span>
-              <span className="text-emerald-400 font-bold bg-white/10 px-2 py-0.5 rounded text-[10px]">EXPORT READY</span>
+              <span className="text-emerald-400 font-bold bg-white/10 px-1.5 py-0.2 rounded text-[10px]">EXPORT READY</span>
             </div>
           ))}
         </div>
       </div>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12 lg:space-y-16 relative z-10">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8 lg:space-y-10 relative z-10">
         
         {/* =========================================================================
-            2. SECTION HEADER (High-End Luxury Editorial)
+            2. SECTION HEADER (Sleek Compact Modern Layout)
             ========================================================================= */}
-        <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-8 border-b border-gray-200/80 pb-10">
-          <div className="space-y-4 max-w-3xl">
-            <div className="flex flex-wrap items-center gap-2.5">
-              <span className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-emerald-100/80 border border-emerald-300/60 text-[#1B4D36] text-xs font-bold uppercase tracking-wider shadow-xs">
+        <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6 border-b border-gray-200/80 pb-6">
+          <div className="space-y-2.5 max-w-3xl">
+            <div className="flex flex-wrap items-center gap-2">
+              <span className="inline-flex items-center gap-1.5 px-3 py-0.5 rounded-full bg-emerald-100/80 border border-emerald-300/60 text-[#1B4D36] text-[11px] font-bold uppercase tracking-wider">
                 <Globe2 className="w-3.5 h-3.5 text-gf-secondary" />
-                Global B2B Sourcing & Export Directory
+                Global B2B Sourcing Hub
               </span>
-              <span className="text-xs font-mono font-bold text-amber-900 bg-amber-100/90 px-3 py-1 rounded-full border border-amber-300">
-                Official 2026 Raw Materials Catalog
+              <span className="text-[11px] font-mono font-bold text-amber-900 bg-amber-100/90 px-2.5 py-0.5 rounded-full border border-amber-300">
+                2026 Raw Materials & Commodities
               </span>
             </div>
 
-            <h2 className="text-3xl sm:text-5xl md:text-[3.4rem] font-extrabold tracking-tight text-[#183B2B] leading-[1.08]">
-              Standardized Organic Commodities, <br />
+            <h2 className="text-2xl sm:text-4xl font-extrabold tracking-tight text-[#183B2B] leading-tight">
+              Himalayan Organic Commodities &amp; <br className="hidden sm:inline" />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#2E7D4F] via-[#386641] to-[#183B2B]">
-                Industrial Hemp & Bio-Materials
+                Industrial Hemp Bio-Materials
               </span>
             </h2>
 
-            <p className="text-sm sm:text-base text-gf-text-muted leading-relaxed font-normal">
-              Direct commercial access to certified Nepalese agricultural cooperatives, sustainable industrial hemp innovators (like <em>Shah Hemp Inno-Ventures</em>), and high-altitude wild botanical extractors. All consignments are backed with GC/MS purity assays, SGS inspection, and turnkey FOB/CIF Incoterms.
+            <p className="text-xs sm:text-sm text-gf-text-muted leading-relaxed font-normal">
+              Direct access to certified Nepalese agricultural cooperatives, sustainable industrial hemp innovators (like <em>Shah Hemp Inno-Ventures</em>), and wild extractors. Turnkey FOB/CIF Incoterms and batch COA testing.
             </p>
           </div>
 
-          {/* Quick Action Dock */}
-          <div className="flex flex-col sm:flex-row lg:flex-col gap-3 shrink-0">
+          {/* Quick Header Actions */}
+          <div className="flex items-center gap-3 shrink-0">
+            {/* View Mode Toggle: Bento Tiles vs Fast Table */}
+            <div className="flex items-center p-1 bg-white rounded-xl border border-gray-200 shadow-xs">
+              <button
+                type="button"
+                onClick={() => setViewMode("bento")}
+                className={`px-3 py-1.5 rounded-lg text-xs font-bold transition-all flex items-center gap-1.5 cursor-pointer ${
+                  viewMode === "bento"
+                    ? "bg-[#183B2B] text-white shadow-xs"
+                    : "text-gray-600 hover:text-[#183B2B]"
+                }`}
+                title="Sleek Landscape Bento View"
+              >
+                <LayoutGrid className="w-3.5 h-3.5" />
+                <span className="hidden sm:inline">Tiles</span>
+              </button>
+
+              <button
+                type="button"
+                onClick={() => setViewMode("table")}
+                className={`px-3 py-1.5 rounded-lg text-xs font-bold transition-all flex items-center gap-1.5 cursor-pointer ${
+                  viewMode === "table"
+                    ? "bg-[#183B2B] text-white shadow-xs"
+                    : "text-gray-600 hover:text-[#183B2B]"
+                }`}
+                title="Compact Data Table Matrix"
+              >
+                <TableProperties className="w-3.5 h-3.5" />
+                <span className="hidden sm:inline">Data Matrix</span>
+              </button>
+            </div>
+
             <button
               type="button"
               onClick={() => handleOpenRfq("All Commodities Sourcing Master Quote")}
-              className="gf-btn-primary text-xs sm:text-sm py-3.5 px-7 shadow-xl hover:scale-105 transition-all flex items-center justify-center gap-2 cursor-pointer"
+              className="gf-btn-primary text-xs py-2.5 px-4 shadow-md hover:scale-105 transition-all flex items-center gap-1.5 cursor-pointer"
             >
-              <Zap className="w-4 h-4 text-gf-peach" />
-              <span>Request Master Proforma & RFQ</span>
-              <ArrowRight className="w-4 h-4" />
+              <Zap className="w-3.5 h-3.5 text-gf-peach" />
+              <span>Master RFQ</span>
             </button>
-
-            <a
-              href="#trade-hub"
-              className="inline-flex items-center justify-center gap-2 py-2.5 px-5 rounded-full bg-white hover:bg-emerald-50 text-[#183B2B] border border-gray-300 text-xs font-bold tracking-wide shadow-xs transition-all text-center"
-            >
-              <span>View Air / Sea Logistics Matrix ✈️</span>
-            </a>
           </div>
         </div>
 
         {/* =========================================================================
-            3. INTERACTIVE CATEGORY TABS & SEARCH/METRICS FILTER BAR
+            3. INTERACTIVE CATEGORY TABS & COMPACT SEARCH BAR
             ========================================================================= */}
-        <div className="space-y-6">
-          
-          <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-4">
-            {/* Category Filter Pills */}
-            <div className="flex items-center gap-2.5 overflow-x-auto pb-2 no-scrollbar">
+        <div className="space-y-4">
+          <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-3">
+            
+            {/* Horizontal Filter Tabs */}
+            <div className="flex items-center gap-2 overflow-x-auto pb-1.5 no-scrollbar">
               {CATEGORIES.map((cat) => {
                 const isActive = activeCategory === cat.id;
                 const IconComponent = cat.icon;
@@ -581,16 +597,16 @@ export function B2BTradeShowcase() {
                     key={cat.id}
                     type="button"
                     onClick={() => setActiveCategory(cat.id)}
-                    className={`px-4 py-2.5 rounded-2xl text-xs font-bold transition-all shrink-0 cursor-pointer flex items-center gap-2.5 border ${
+                    className={`px-3.5 py-1.5 rounded-xl text-xs font-bold transition-all shrink-0 cursor-pointer flex items-center gap-2 border ${
                       isActive
-                        ? "bg-[#183B2B] text-white border-[#183B2B] shadow-lg scale-[1.02]"
-                        : "bg-white text-gf-text hover:bg-emerald-50/80 hover:text-[#183B2B] border-gray-200 shadow-xs"
+                        ? "bg-[#183B2B] text-white border-[#183B2B] shadow-sm"
+                        : "bg-white text-gf-text hover:bg-emerald-50/80 hover:text-[#183B2B] border-gray-200"
                     }`}
                   >
-                    <IconComponent className={`w-4 h-4 ${isActive ? "text-gf-peach" : "text-gf-secondary"}`} />
+                    <IconComponent className={`w-3.5 h-3.5 ${isActive ? "text-gf-peach" : "text-gf-secondary"}`} />
                     <span>{cat.label}</span>
                     <span
-                      className={`text-[10px] px-2 py-0.5 rounded-full font-mono font-bold ${
+                      className={`text-[10px] px-1.5 py-0.2 rounded-full font-mono ${
                         isActive ? "bg-white/20 text-white" : "bg-gray-100 text-gray-700"
                       }`}
                     >
@@ -602,317 +618,275 @@ export function B2BTradeShowcase() {
             </div>
 
             {/* Live Search Input */}
-            <div className="relative w-full lg:w-80 shrink-0">
-              <Search className="w-4 h-4 text-gray-400 absolute left-4 top-1/2 -translate-y-1/2 pointer-events-none" />
+            <div className="relative w-full lg:w-72 shrink-0">
+              <Search className="w-3.5 h-3.5 text-gray-400 absolute left-3.5 top-1/2 -translate-y-1/2 pointer-events-none" />
               <input
                 type="text"
-                placeholder="Search commodity, assay, terroir..."
+                placeholder="Search raw material, terroir, spec..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-full pl-10 pr-4 py-2.5 rounded-2xl border border-gray-300 bg-white text-xs font-medium focus:outline-none focus:ring-2 focus:ring-gf-secondary/20 focus:border-gf-secondary shadow-xs transition-all"
+                className="w-full pl-9 pr-4 py-1.5 rounded-xl border border-gray-300 bg-white text-xs font-medium focus:outline-none focus:ring-2 focus:ring-gf-secondary/20 focus:border-gf-secondary shadow-xs transition-all"
               />
               {searchQuery && (
                 <button
                   type="button"
                   onClick={() => setSearchQuery("")}
-                  className="text-xs text-gray-400 hover:text-gray-700 absolute right-4 top-1/2 -translate-y-1/2 cursor-pointer font-bold"
+                  className="text-xs text-gray-400 hover:text-gray-700 absolute right-3 top-1/2 -translate-y-1/2 cursor-pointer font-bold"
                 >
                   Clear
                 </button>
               )}
             </div>
           </div>
-
-          {/* Sourcing Guarantee Ribbon */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-3 bg-white/90 backdrop-blur-md p-4 rounded-3xl border border-gray-200 shadow-sm text-xs">
-            <div className="flex items-center gap-3 p-2 rounded-2xl bg-[#F4F9F5]">
-              <div className="w-9 h-9 rounded-xl bg-[#2E7D4F] text-white flex items-center justify-center shadow-sm shrink-0">
-                <ShieldCheck className="w-5 h-5" />
-              </div>
-              <div>
-                <span className="font-bold text-[#183B2B] block leading-tight">100% Assay Certified</span>
-                <span className="text-[11px] text-gf-text-muted">HPLC & GC/MS Tested</span>
-              </div>
-            </div>
-
-            <div className="flex items-center gap-3 p-2 rounded-2xl bg-[#F4F9F5]">
-              <div className="w-9 h-9 rounded-xl bg-[#2E7D4F] text-white flex items-center justify-center shadow-sm shrink-0">
-                <Package className="w-5 h-5" />
-              </div>
-              <div>
-                <span className="font-bold text-[#183B2B] block leading-tight">Flexible Bulk MOQs</span>
-                <span className="text-[11px] text-gf-text-muted">From 25kg to 50MT FCL</span>
-              </div>
-            </div>
-
-            <div className="flex items-center gap-3 p-2 rounded-2xl bg-[#F4F9F5]">
-              <div className="w-9 h-9 rounded-xl bg-[#2E7D4F] text-white flex items-center justify-center shadow-sm shrink-0">
-                <FileText className="w-5 h-5" />
-              </div>
-              <div>
-                <span className="font-bold text-[#183B2B] block leading-tight">Lab Sample Parcels</span>
-                <span className="text-[11px] text-gf-text-muted">DHL / FedEx Express</span>
-              </div>
-            </div>
-
-            <div className="flex items-center gap-3 p-2 rounded-2xl bg-[#F4F9F5]">
-              <div className="w-9 h-9 rounded-xl bg-[#2E7D4F] text-white flex items-center justify-center shadow-sm shrink-0">
-                <Layers className="w-5 h-5" />
-              </div>
-              <div>
-                <span className="font-bold text-[#183B2B] block leading-tight">OEM Private Label</span>
-                <span className="text-[11px] text-gf-text-muted">Custom Retail Packaging</span>
-              </div>
-            </div>
-          </div>
-
         </div>
 
         {/* =========================================================================
-            4. LUXURY B2B COMMODITY CARDS (Redesigned with Potency Bars & Spec Drawers)
+            4. PRODUCTS PRESENTATION: SHORT HORIZONTAL BENTO TILES OR TABLE
             ========================================================================= */}
         {filteredProducts.length === 0 ? (
-          <div className="text-center py-20 bg-white rounded-3xl border border-gray-200 shadow-sm space-y-4 max-w-xl mx-auto">
-            <div className="w-14 h-14 rounded-full bg-emerald-50 text-gf-secondary flex items-center justify-center mx-auto">
-              <Search className="w-6 h-6" />
-            </div>
-            <p className="text-lg font-bold text-gf-primary">No organic products match &quot;{searchQuery}&quot;</p>
-            <p className="text-xs text-gf-text-muted leading-relaxed">
-              Try searching for &quot;Hemp&quot;, &quot;Timur&quot;, &quot;Cardamom&quot;, &quot;Shilajit&quot;, &quot;Tea&quot;, &quot;Oil&quot;, or reset your filters.
-            </p>
+          <div className="text-center py-12 bg-white rounded-2xl border border-gray-200 shadow-sm space-y-3 max-w-md mx-auto">
+            <Search className="w-6 h-6 text-gray-400 mx-auto" />
+            <p className="text-sm font-bold text-gf-primary">No commodities match &quot;{searchQuery}&quot;</p>
             <button
               type="button"
               onClick={() => { setActiveCategory("all"); setSearchQuery(""); }}
-              className="gf-btn-primary text-xs px-5 py-2.5 mt-2"
+              className="gf-btn-primary text-xs px-4 py-1.5"
             >
-              Reset All Filters
+              Reset Filters
             </button>
           </div>
-        ) : (
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {filteredProducts.map((product) => {
-              const isExpanded = expandedCardId === product.id;
+        ) : viewMode === "bento" ? (
+          /* =======================================================================
+             VIEW 1: SLEEK HORIZONTAL LANDSCAPE BENTO TILES (Short, Compact & Modern)
+             ======================================================================= */
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-5">
+            {filteredProducts.map((product) => (
+              <div
+                key={product.id}
+                className="group flex flex-col sm:flex-row bg-white rounded-2xl border border-gray-200/90 hover:border-emerald-500 shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden hover:-translate-y-0.5"
+              >
+                {/* Left Side: Compact Image Thumbnail (Squarish on desktop) */}
+                <div className="relative w-full sm:w-44 lg:w-48 h-40 sm:h-auto shrink-0 overflow-hidden bg-gray-900">
+                  <img
+                    src={product.image}
+                    alt={product.name}
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-108"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t sm:bg-gradient-to-r from-black/75 via-black/20 to-transparent" />
 
-              return (
-                <div
-                  key={product.id}
-                  className="group relative flex flex-col justify-between rounded-3xl bg-white border border-gray-200/90 hover:border-emerald-500 shadow-md hover:shadow-2xl transition-all duration-300 overflow-hidden hover:-translate-y-1.5"
-                >
-                  <div>
-                    {/* Visual Hero Area with Overlaid Badges */}
-                    <div className="relative h-56 w-full overflow-hidden bg-gray-900">
-                      <img
-                        src={product.image}
-                        alt={product.name}
-                        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-108"
-                      />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent" />
+                  {/* Badges Over Image */}
+                  <div className="absolute top-2.5 left-2.5 right-2.5 flex items-center justify-between gap-1 z-10">
+                    <span className="text-[9px] font-bold uppercase tracking-wider bg-black/60 text-white backdrop-blur-md px-2 py-0.5 rounded-md border border-white/20">
+                      {product.categoryLabel}
+                    </span>
 
-                      {/* Top Glass Badges */}
-                      <div className="absolute top-3.5 left-3.5 right-3.5 flex items-center justify-between gap-2 z-10">
-                        <span className="text-[10px] font-bold uppercase tracking-wider bg-black/60 text-white backdrop-blur-md px-3 py-1 rounded-full border border-white/20 shadow-sm">
-                          {product.categoryLabel}
-                        </span>
+                    {product.badge && (
+                      <span className="text-[9px] font-extrabold uppercase tracking-wider bg-gf-peach text-gray-950 px-2 py-0.5 rounded-md font-sans">
+                        {product.badge}
+                      </span>
+                    )}
+                  </div>
 
-                        {product.badge && (
-                          <span className="text-[10px] font-extrabold uppercase tracking-wider bg-gf-peach text-gray-950 px-3 py-1 rounded-full shadow-md font-sans">
-                            {product.badge}
-                          </span>
-                        )}
-                      </div>
+                  <div className="absolute bottom-2.5 left-2.5 right-2.5 text-white flex items-center justify-between text-[11px] z-10">
+                    <span className="truncate font-semibold text-emerald-100 drop-shadow-sm">
+                      📍 {product.terroir}
+                    </span>
+                    <span className="font-mono text-[10px] text-white/90 bg-black/50 px-1.5 py-0.2 rounded">
+                      {product.altitude}
+                    </span>
+                  </div>
+                </div>
 
-                      {/* Bottom Floating Terroir and Elevation */}
-                      <div className="absolute bottom-3.5 left-3.5 right-3.5 text-white flex items-center justify-between text-xs z-10">
-                        <span className="truncate font-bold drop-shadow-md text-emerald-100 flex items-center gap-1.5">
-                          <span className="text-gf-peach">📍</span> {product.terroir}
-                        </span>
-                        <span className="font-mono text-[11px] font-bold text-white bg-black/50 backdrop-blur-md px-2.5 py-0.5 rounded-lg border border-white/15">
-                          {product.altitude}
-                        </span>
-                      </div>
-                    </div>
-
-                    {/* Card Content Body */}
-                    <div className="p-6 space-y-4">
-                      
-                      {/* Name & Tagline */}
-                      <div className="space-y-1.5">
-                        <h3 className="text-xl font-extrabold text-[#183B2B] group-hover:text-[#2E7D4F] transition-colors leading-snug">
+                {/* Right Side: Structured Compact Content Pane */}
+                <div className="p-4 sm:p-5 flex-1 flex flex-col justify-between space-y-3">
+                  
+                  <div className="space-y-2">
+                    {/* Title and Key Metric Chip */}
+                    <div className="flex items-start justify-between gap-2">
+                      <div>
+                        <h3 className="text-base font-extrabold text-[#183B2B] group-hover:text-[#2E7D4F] transition-colors leading-snug">
                           {product.name}
                         </h3>
-                        <p className="text-xs text-gf-text-muted line-clamp-2 leading-relaxed font-light">
+                        <p className="text-[11px] text-gf-text-muted line-clamp-1 font-light mt-0.5">
                           {product.tagline}
                         </p>
                       </div>
 
-                      {/* Chemical Potency & Key Assay Progress Bar (Luxury Feature) */}
-                      <div className="bg-[#F4F8F5] rounded-2xl p-3.5 border border-emerald-100 space-y-2">
-                        <div className="flex items-center justify-between text-xs">
-                          <span className="font-bold text-[#183B2B] flex items-center gap-1.5">
-                            <Activity className="w-3.5 h-3.5 text-gf-secondary" />
-                            {product.keyMetric.label}
-                          </span>
-                          <span className="font-mono font-extrabold text-[#2E7D4F] bg-white px-2 py-0.5 rounded-md border border-emerald-200/80 shadow-xs">
-                            {product.keyMetric.value}
-                          </span>
-                        </div>
-                        {/* Visual Potency Level */}
-                        <div className="w-full bg-gray-200 h-1.5 rounded-full overflow-hidden">
-                          <div
-                            className="bg-gradient-to-r from-emerald-500 to-[#183B2B] h-full rounded-full transition-all duration-1000"
-                            style={{ width: `${product.keyMetric.percent}%` }}
-                          />
-                        </div>
+                      {/* Chemical Potency Mini-Badge */}
+                      <div className="shrink-0 bg-emerald-50 border border-emerald-200/80 px-2 py-1 rounded-lg text-right">
+                        <span className="text-[9px] uppercase font-bold text-emerald-700 block leading-none">
+                          {product.keyMetric.label.split(" ")[0]}
+                        </span>
+                        <span className="font-mono text-[11px] font-extrabold text-[#1B4D36] block">
+                          {product.keyMetric.value}
+                        </span>
                       </div>
+                    </div>
 
-                      {/* Technical Spec Matrix */}
-                      <div className="bg-white rounded-2xl p-3 border border-gray-100 shadow-inner space-y-1.5 text-xs">
-                        {product.specs.slice(0, 3).map((spec, sIdx) => (
-                          <div key={sIdx} className="flex items-center justify-between gap-2 border-b border-gray-100 last:border-0 pb-1 last:pb-0">
-                            <span className="text-[11px] font-medium text-gf-text-muted">{spec.label}</span>
-                            <span className="font-mono text-[11px] font-bold text-[#183B2B] text-right">{spec.value}</span>
-                          </div>
-                        ))}
+                    {/* Compact Specs Grid (2x2) */}
+                    <div className="grid grid-cols-2 gap-2 bg-[#F8FAF7] p-2.5 rounded-xl border border-gray-100 text-[11px]">
+                      <div className="flex items-center justify-between border-r border-gray-200 pr-2">
+                        <span className="text-gray-500 font-medium">Annual Yield:</span>
+                        <span className="font-mono font-bold text-[#183B2B]">{product.annualCapacity}</span>
                       </div>
-
-                      {/* Logistics & Supply Capacity Grid */}
-                      <div className="grid grid-cols-2 gap-2 pt-1">
-                        <div className="p-2.5 rounded-xl bg-gray-50 border border-gray-100 text-xs">
-                          <span className="text-[10px] uppercase font-bold text-gray-400 block">Annual Yield</span>
-                          <span className="font-mono font-bold text-[#183B2B] text-[11px] truncate block">
-                            {product.annualCapacity.split(" / ")[0]}
-                          </span>
-                        </div>
-                        <div className="p-2.5 rounded-xl bg-emerald-50/70 border border-emerald-100 text-xs">
-                          <span className="text-[10px] uppercase font-bold text-emerald-700 block">Minimum Order (MOQ)</span>
-                          <span className="font-mono font-bold text-[#2E7D4F] text-[11px] truncate block">
-                            {product.moq}
-                          </span>
-                        </div>
+                      <div className="flex items-center justify-between pl-1">
+                        <span className="text-gray-500 font-medium">Min Order:</span>
+                        <span className="font-mono font-bold text-[#2E7D4F]">{product.moq}</span>
                       </div>
-
-                      {/* Expandable Extended Specs & Packaging Details */}
-                      {isExpanded && (
-                        <div className="p-3 bg-amber-50/70 rounded-2xl border border-amber-200/80 text-xs space-y-2 animate-in fade-in duration-200">
-                          <div className="font-bold text-amber-950 flex items-center justify-between">
-                            <span>Packaging & Incoterms</span>
-                            <span className="text-[10px] font-mono font-normal">FOB KTM / Sea FCL</span>
-                          </div>
-                          <p className="text-[11px] text-amber-900 leading-tight">
-                            <strong>Standard Export Pack:</strong> {product.packaging}
-                          </p>
-                          <p className="text-[11px] text-amber-900 leading-tight">
-                            <strong>Additional Assay:</strong> {product.specs[3]?.label}: {product.specs[3]?.value}
-                          </p>
-                        </div>
-                      )}
-
-                      {/* Certification Badges */}
-                      <div className="flex flex-wrap gap-1.5 pt-1">
-                        {product.certifications.map((cert, cIdx) => (
-                          <span
-                            key={cIdx}
-                            className="text-[10px] font-bold bg-emerald-50 text-[#1B4D36] border border-emerald-200/80 px-2.5 py-0.5 rounded-lg flex items-center gap-1 shadow-xs"
-                          >
-                            <Check className="w-2.5 h-2.5 text-emerald-600 stroke-[3]" />
-                            {cert}
-                          </span>
-                        ))}
+                      <div className="flex items-center justify-between border-r border-gray-200 pr-2 border-t border-gray-100 pt-1">
+                        <span className="text-gray-500 font-medium">Pack:</span>
+                        <span className="font-mono text-[10px] text-gray-800 truncate">{product.packaging.split(" / ")[0]}</span>
                       </div>
+                      <div className="flex items-center justify-between pl-1 border-t border-gray-100 pt-1">
+                        <span className="text-gray-500 font-medium">Quality:</span>
+                        <span className="font-mono text-[10px] text-emerald-800 font-bold">{product.certifications[0]}</span>
+                      </div>
+                    </div>
 
+                    {/* Certifications Inline Chips */}
+                    <div className="flex flex-wrap items-center gap-1">
+                      {product.certifications.slice(0, 3).map((cert, cIdx) => (
+                        <span
+                          key={cIdx}
+                          className="text-[9px] font-bold bg-gray-50 text-gray-700 border border-gray-200 px-1.5 py-0.2 rounded flex items-center gap-1"
+                        >
+                          <Check className="w-2 h-2 text-emerald-600 stroke-[3]" />
+                          {cert}
+                        </span>
+                      ))}
                     </div>
                   </div>
 
-                  {/* Card Actions Footer */}
-                  <div className="p-6 pt-0 space-y-2.5 border-t border-gray-100">
-                    <div className="flex items-center gap-2 pt-3">
-                      <button
-                        type="button"
-                        onClick={() => handleOpenRfq(product.name)}
-                        className="gf-btn-primary flex-1 justify-center text-xs py-3 px-4 shadow-md hover:scale-[1.02] cursor-pointer"
-                      >
-                        <span>Request Spec & Sample</span>
-                        <ArrowRight className="w-3.5 h-3.5" />
-                      </button>
-
-                      <button
-                        type="button"
-                        onClick={() => toggleExpandCard(product.id)}
-                        className="p-2.5 rounded-full bg-gray-100 hover:bg-gray-200 text-gray-700 transition-colors cursor-pointer"
-                        title={isExpanded ? "Collapse Specs" : "View Packaging & Logistics"}
-                        aria-label="Toggle card details"
-                      >
-                        <Eye className="w-4 h-4" />
-                      </button>
-                    </div>
+                  {/* Compact Bottom Actions */}
+                  <div className="pt-2 border-t border-gray-100 flex items-center justify-between gap-2">
+                    <button
+                      type="button"
+                      onClick={() => handleOpenRfq(product.name)}
+                      className="gf-btn-primary text-[11px] py-1.5 px-3.5 shadow-xs cursor-pointer flex items-center gap-1.5"
+                    >
+                      <span>Sample Kit &amp; Specs</span>
+                      <ArrowRight className="w-3 h-3" />
+                    </button>
 
                     <button
                       type="button"
                       onClick={() => handleOpenRfq(product.name)}
-                      className="w-full text-center text-[11px] font-bold text-gf-text-muted hover:text-gf-secondary py-1 transition-colors cursor-pointer flex items-center justify-center gap-1"
+                      className="text-[11px] font-bold text-gf-text-muted hover:text-gf-secondary transition-colors cursor-pointer flex items-center gap-1"
                     >
-                      <span>Instant FOB / CIF Proforma Calculation</span>
-                      <ArrowUpRight className="w-3.5 h-3.5" />
+                      <span>Proforma RFQ</span>
+                      <ArrowUpRight className="w-3 h-3" />
                     </button>
                   </div>
 
                 </div>
-              );
-            })}
+              </div>
+            ))}
+          </div>
+        ) : (
+          /* =======================================================================
+             VIEW 2: FAST COMPACT TRADE DATA MATRIX (Table View)
+             ======================================================================= */
+          <div className="bg-white rounded-2xl border border-gray-200 shadow-sm overflow-hidden">
+            <div className="overflow-x-auto">
+              <table className="w-full text-left border-collapse text-xs">
+                <thead>
+                  <tr className="bg-[#183B2B] text-white text-[11px] font-mono uppercase tracking-wider">
+                    <th className="py-3 px-4">Commodity / Raw Material</th>
+                    <th className="py-3 px-3">Terroir / Elevation</th>
+                    <th className="py-3 px-3">Key Assay / Compound</th>
+                    <th className="py-3 px-3">Annual Yield</th>
+                    <th className="py-3 px-3">MOQ</th>
+                    <th className="py-3 px-3">Standard Packaging</th>
+                    <th className="py-3 px-4 text-right">Action</th>
+                  </tr>
+                </thead>
+                <tbody className="divide-y divide-gray-100 text-gf-text font-medium">
+                  {filteredProducts.map((product) => (
+                    <tr key={product.id} className="hover:bg-emerald-50/50 transition-colors">
+                      <td className="py-3 px-4">
+                        <div className="flex items-center gap-3">
+                          <img
+                            src={product.image}
+                            alt={product.name}
+                            className="w-10 h-10 rounded-lg object-cover shrink-0 border border-gray-200"
+                          />
+                          <div>
+                            <span className="font-extrabold text-[#183B2B] block text-xs">{product.name}</span>
+                            <span className="text-[10px] text-gray-500 block">{product.categoryLabel}</span>
+                          </div>
+                        </div>
+                      </td>
+
+                      <td className="py-3 px-3">
+                        <span className="font-semibold text-[#183B2B] block">{product.terroir}</span>
+                        <span className="text-[10px] font-mono text-gray-500">{product.altitude}</span>
+                      </td>
+
+                      <td className="py-3 px-3">
+                        <span className="font-mono font-bold text-emerald-800 bg-emerald-50 px-2 py-0.5 rounded border border-emerald-200 inline-block text-[11px]">
+                          {product.keyMetric.value}
+                        </span>
+                      </td>
+
+                      <td className="py-3 px-3 font-mono text-gray-700">{product.annualCapacity}</td>
+                      <td className="py-3 px-3 font-mono font-bold text-[#2E7D4F]">{product.moq}</td>
+                      <td className="py-3 px-3 text-[11px] text-gray-600 truncate max-w-[140px]">{product.packaging}</td>
+
+                      <td className="py-3 px-4 text-right">
+                        <button
+                          type="button"
+                          onClick={() => handleOpenRfq(product.name)}
+                          className="gf-btn-primary text-[10px] py-1.5 px-3 shadow-xs cursor-pointer inline-flex items-center gap-1"
+                        >
+                          <span>Request Quote</span>
+                          <ArrowRight className="w-3 h-3" />
+                        </button>
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
           </div>
         )}
 
         {/* =========================================================================
-            5. INTERACTIVE 5-ITEM SOURCING SAMPLE BOX BUILDER BANNER
+            5. SOURCING SAMPLE BOX BUILDER BANNER (Compact & Elegant)
             ========================================================================= */}
-        <div className="rounded-3xl bg-gradient-to-br from-[#183B2B] via-[#1E4533] to-[#2E7D4F] text-white p-8 sm:p-12 shadow-2xl relative overflow-hidden border border-emerald-600/30">
-          <div className="absolute -right-10 -bottom-10 w-96 h-96 bg-emerald-400/10 rounded-full blur-3xl pointer-events-none" />
-          <div className="absolute left-10 top-0 w-80 h-80 bg-amber-400/10 rounded-full blur-3xl pointer-events-none" />
-
-          <div className="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-            <div className="lg:col-span-8 space-y-4">
-              <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-white/10 text-gf-peach text-xs font-bold uppercase tracking-wider border border-white/15 backdrop-blur-md">
-                <Sparkles className="w-3.5 h-3.5" />
-                International Procurement Sourcing Box
+        <div className="rounded-2xl bg-gradient-to-br from-[#183B2B] via-[#1E4533] to-[#2E7D4F] text-white p-6 sm:p-8 shadow-xl relative overflow-hidden border border-emerald-600/30">
+          <div className="relative z-10 flex flex-col md:flex-row items-center justify-between gap-6">
+            <div className="space-y-2 max-w-2xl">
+              <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-white/10 text-gf-peach text-[10px] font-bold uppercase tracking-wider border border-white/15">
+                <Sparkles className="w-3 h-3" />
+                Procurement Sample Kit
               </div>
 
-              <h3 className="text-2xl sm:text-4xl font-extrabold text-white leading-tight">
-                Curate Your Custom 5-Item Himalayan Sourcing & Lab Sample Kit
+              <h3 className="text-xl sm:text-2xl font-extrabold text-white leading-tight">
+                Curate Your Custom 5-Item Sourcing &amp; Lab Sample Kit
               </h3>
 
-              <p className="text-xs sm:text-sm text-emerald-100 font-light max-w-2xl leading-relaxed">
-                Qualified commercial importers, brand formulators, and textile mills can request an official export presentation box featuring verified batches of industrial hemp hurd, cold-pressed seed oils, wild spices, Shilajit, and organic teas with corresponding Eurofins/SGS laboratory assays.
+              <p className="text-xs text-emerald-100 font-light leading-relaxed">
+                Request an official export presentation box featuring verified batches of industrial hemp hurd, cold-pressed seed oils, wild spices, and teas with Eurofins/SGS assays. Dispatched in 48h via DHL Express.
               </p>
-
-              <div className="flex flex-wrap gap-4 pt-2 text-xs text-gray-200">
-                <span className="flex items-center gap-1.5">
-                  <CheckCircle2 className="w-4 h-4 text-gf-peach" />
-                  Dispatched via DHL Express within 48h
-                </span>
-                <span className="flex items-center gap-1.5">
-                  <CheckCircle2 className="w-4 h-4 text-gf-peach" />
-                  Full Certificate of Analysis (COA) Included
-                </span>
-              </div>
             </div>
 
-            <div className="lg:col-span-4 flex flex-col gap-3 items-stretch lg:items-end justify-center">
+            <div className="flex flex-col sm:flex-row gap-2.5 shrink-0 w-full md:w-auto">
               <button
                 type="button"
                 onClick={() => handleOpenRfq("Custom 5-Item Sourcing & Sample Kit Box")}
-                className="gf-btn-white w-full text-center justify-center text-xs sm:text-sm py-4 shadow-2xl hover:scale-105 transition-all font-bold cursor-pointer"
+                className="gf-btn-white text-xs py-2.5 px-5 shadow-lg font-bold cursor-pointer text-center justify-center"
               >
-                <span>Request Sample Kit Parcel</span>
-                <ArrowRight className="w-4 h-4" />
+                <span>Request Sample Box</span>
+                <ArrowRight className="w-3.5 h-3.5" />
               </button>
 
               <button
                 type="button"
                 onClick={() => handleOpenRfq("2026 Complete Export Price List & Tonnage Schedule")}
-                className="inline-flex items-center justify-center gap-2 py-3 px-5 rounded-full bg-white/10 hover:bg-white/20 text-white border border-white/20 text-xs font-bold tracking-wide transition-all cursor-pointer text-center"
+                className="inline-flex items-center justify-center gap-1.5 py-2.5 px-4 rounded-full bg-white/10 hover:bg-white/20 text-white border border-white/20 text-xs font-bold transition-all cursor-pointer text-center"
               >
                 <FileText className="w-3.5 h-3.5" />
-                <span>Download 2026 Export Pricing (PDF)</span>
+                <span>Export Price List (PDF)</span>
               </button>
             </div>
           </div>
