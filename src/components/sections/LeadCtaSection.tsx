@@ -86,7 +86,7 @@ export function LeadCtaSection() {
                 <div className="w-8 h-8 rounded-full bg-gf-bg-tint text-gf-secondary flex items-center justify-center shrink-0">
                   <Phone className="w-4 h-4" />
                 </div>
-                <span>+977 01-4220000 · +977 9800000000</span>
+                <span>+977 970-8618779 (WhatsApp) · +977 01-4220000</span>
               </div>
             </div>
           </div>
