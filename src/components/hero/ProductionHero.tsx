@@ -1,85 +1,32 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
-import { ArrowDown, ArrowRight, ShoppingBag, Image as ImageIcon, CreditCard, Sparkles, MapPin, Calendar } from "lucide-react";
+import React from "react";
+import { ArrowDown, ArrowRight, ShoppingBag, Image as ImageIcon, CreditCard, Sparkles, MapPin } from "lucide-react";
 import { RotatingStamp } from "@/components/ui/RotatingStamp";
 
-const HERO_SLIDES = [
-
-  {
-    id: "tea-coffee",
-    title: "Highland Orthodox White Needle Tea & Shade-Grown Arabica",
-    sector: "Pavilion 01 · High Hills",
-    tag: "Ilam & Nuwakot Estates · 2,150m Glacier-Fed Terroir",
-    image: "https://images.unsplash.com/photo-1564890369478-c89ca6d9cde9?auto=format&fit=crop&w=2400&q=85",
-  },
-  {
-    id: "cliff-honey-herbs",
-    title: "Wild Himalayan Cliff Honey & Rare Bio-Active Botanicals",
-    sector: "Pavilion 02 · Alpine Himalayas",
-    tag: "Annapurna & Karnali · Raw Cliff Harvest & Shilajit Purity",
-    image: "https://images.unsplash.com/photo-1587049352846-4a222e784d38?auto=format&fit=crop&w=2400&q=85",
-  },
-  {
-    id: "spices-oils",
-    title: "Wild Timur Pepper, Black Cardamom & Essential Distillates",
-    sector: "Pavilion 03 · Mid-Mountain Valleys",
-    tag: "Mustang, Taplejung & Rolpa · High Citronellal & Cineole",
-    image: "https://images.unsplash.com/photo-1599940824399-b87987ceb72a?auto=format&fit=crop&w=2400&q=85",
-  },
-  {
-    id: "grains-terai",
-    title: "Jumla Marsi Red Rice, Tartary Buckwheat & Terai Aromatic Paddy",
-    sector: "Pavilion 04 · Heritage Belts",
-    tag: "High-Altitude 2,600m Grains & Organic Terai Moringa",
-    image: "https://images.unsplash.com/photo-1500937386664-56d1dfef3854?auto=format&fit=crop&w=2400&q=85",
-  },
-];
+const HERO_DATA = {
+  title: "Wild Timur Pepper, Black Cardamom & Essential Distillates",
+  sector: "Pavilion 03 · Mid-Mountain Valleys",
+  tag: "Mustang, Taplejung & Rolpa · High Citronellal & Cineole",
+  image: "https://images.unsplash.com/photo-1599940824399-b87987ceb72a?auto=format&fit=crop&w=2400&q=85",
+};
 
 export function ProductionHero() {
-  const [activeSlide, setActiveSlide] = useState(0);
-
-  // Auto-advance slides every 5.5 seconds
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setActiveSlide((prev) => (prev + 1) % HERO_SLIDES.length);
-    }, 5500);
-
-    return () => clearInterval(timer);
-  }, []);
-
   return (
     <section className="relative w-full min-h-[700px] lg:min-h-[820px] max-h-[1020px] flex flex-col justify-end overflow-hidden bg-black text-white">
       
       {/* ==========================================================================
-          1. DYNAMIC CINEMATIC MULTI-SLIDE BACKGROUND (Ken Burns & Cross-Fade)
+          1. DYNAMIC CINEMATIC BACKGROUND (Ken Burns Effect)
           ========================================================================== */}
       <div className="absolute inset-0 z-0 overflow-hidden">
-        {HERO_SLIDES.map((slide, index) => {
-          const isActive = activeSlide === index;
-          return (
-            <div
-              key={slide.id}
-              className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${
-                isActive ? "opacity-100 z-10" : "opacity-0 z-0 pointer-events-none"
-              }`}
-            >
-              <img
-                src={slide.image}
-                alt={slide.title}
-                className={`w-full h-full object-cover object-center transition-transform duration-[6000ms] ease-out ${
-                  isActive ? "scale-110" : "scale-100"
-                }`}
-              />
-            </div>
-          );
-        })}
+        <img
+          src={HERO_DATA.image}
+          alt={HERO_DATA.title}
+          className="w-full h-full object-cover object-center scale-105 transition-transform duration-1000 ease-out"
+        />
 
-        {/* Multi-Stop Cinematic Scrim:
-            - Top dark gradient for transparent navbar
-            - Open middle to highlight perspective visual depth
-            - Deep dark bottom scrim for high-contrast white typography */}
-        <div className="absolute inset-0 z-20 bg-gradient-to-b from-black/80 via-black/20 to-black/95 pointer-events-none" />
+        {/* Multi-Stop Cinematic Scrim */}
+        <div className="absolute inset-0 z-20 bg-gradient-to-b from-black/80 via-black/25 to-black/95 pointer-events-none" />
       </div>
 
       {/* ==========================================================================
@@ -125,7 +72,7 @@ export function ProductionHero() {
           </a>
 
           <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-gf-secondary text-white text-[11px] font-bold uppercase tracking-wider shadow-md">
-            {HERO_SLIDES[activeSlide].sector}
+            {HERO_DATA.sector}
           </span>
 
           <span className="text-xs sm:text-sm font-bold uppercase tracking-[0.14em] text-white/90 font-sans drop-shadow-md hidden sm:inline">
@@ -144,8 +91,8 @@ export function ProductionHero() {
             </h1>
 
             {/* Dynamic Active Sector Name */}
-            <p className="text-xs sm:text-sm text-gf-peach font-semibold tracking-wide transition-all duration-500">
-              Focus: {HERO_SLIDES[activeSlide].title} · {HERO_SLIDES[activeSlide].tag}
+            <p className="text-xs sm:text-sm text-gf-peach font-semibold tracking-wide">
+              Focus: {HERO_DATA.title} · {HERO_DATA.tag}
             </p>
 
             {/* CTAs */}
@@ -174,7 +121,7 @@ export function ProductionHero() {
             </div>
           </div>
 
-          {/* Bottom Right: Rotating Stamp + Slide Progress Navigation + Scroll Down */}
+          {/* Bottom Right: Rotating Stamp + Scroll Down */}
           <div className="flex flex-col items-start lg:items-end gap-5 w-full lg:w-auto">
             
             {/* EcoGrow Style Rotating Stamp Floating Badge */}
@@ -184,24 +131,6 @@ export function ProductionHero() {
                 size={120}
                 text="• 100% CERTIFIED ORGANIC • HIMALAYAN EXPO • 2026 •"
               />
-            </div>
-
-            {/* 4-Sector Slide Progress Navigation Bars */}
-            <div className="flex items-center gap-2">
-              {HERO_SLIDES.map((slide, idx) => {
-                const isActive = activeSlide === idx;
-                return (
-                  <button
-                    key={slide.id}
-                    type="button"
-                    onClick={() => setActiveSlide(idx)}
-                    className={`h-2 rounded-full transition-all duration-500 cursor-pointer ${
-                      isActive ? "w-8 bg-gf-accent-mint" : "w-3 bg-white/30 hover:bg-white/60"
-                    }`}
-                    aria-label={`Jump to slide ${idx + 1}: ${slide.title}`}
-                  />
-                );
-              })}
             </div>
 
             {/* Scroll Down Indicator */}
@@ -216,7 +145,6 @@ export function ProductionHero() {
             </a>
 
           </div>
-
 
         </div>
 
