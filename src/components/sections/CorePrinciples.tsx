@@ -5,16 +5,16 @@ import { CheckCircle2, ShieldCheck, Sprout, HeartHandshake, Globe } from "lucide
 
 export function CorePrinciples() {
   return (
-    <section className="py-16 sm:py-24 bg-gf-bg-warm">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
+    <section className="py-20 lg:py-24 bg-gf-bg-warm border-t border-gf-border">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16 lg:space-y-20">
         
         {/* ==========================================================================
             1. 4-BLOCK BENTO STATS & PHOTO BANNER (Greenflow Exact Layout)
             ========================================================================== */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 items-stretch">
           
           {/* Block 1: Dark Green Stats Card */}
-          <div className="gf-card-dark p-7 flex flex-col justify-between space-y-6">
+          <div className="gf-card-dark p-7 flex flex-col justify-between space-y-6 h-full min-h-[240px] shadow-md">
             <div>
               <span className="text-3xl sm:text-4xl font-extrabold text-white block">150+</span>
               <p className="text-xs sm:text-sm text-gf-accent-sage font-medium mt-1">Certified Exhibiting Growers</p>
@@ -26,20 +26,20 @@ export function CorePrinciples() {
           </div>
 
           {/* Block 2: Image Card 1 */}
-          <div className="relative rounded-[20px] overflow-hidden shadow-md group min-h-[220px] bg-gf-primary/10">
+          <div className="relative rounded-[20px] overflow-hidden shadow-md group min-h-[240px] h-full bg-gf-primary/10">
             <img
-              src="https://images.unsplash.com/photo-1500651230702-0e2d8a49d4ad?auto=format&fit=crop&w=800&q=80"
-              alt="Himalayan Organic Terrace Farming"
+              src="https://images.unsplash.com/photo-1500937386664-56d1dfef3854?auto=format&fit=crop&w=800&q=80"
+              alt="Himalayan Mountain Agricultural Terraces"
               className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-gf-primary/60 via-transparent to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-t from-gf-primary/70 via-transparent to-transparent" />
             <span className="absolute bottom-3 left-4 text-xs font-semibold text-white">
               Pristine Mountain Soils
             </span>
           </div>
 
           {/* Block 3: Dark Green Stats Card */}
-          <div className="gf-card-dark p-7 flex flex-col justify-between space-y-6">
+          <div className="gf-card-dark p-7 flex flex-col justify-between space-y-6 h-full min-h-[240px] shadow-md">
             <div>
               <span className="text-3xl sm:text-4xl font-extrabold text-white block">25+</span>
               <p className="text-xs sm:text-sm text-gf-accent-sage font-medium mt-1">Sourcing Nations Represented</p>
@@ -51,19 +51,20 @@ export function CorePrinciples() {
           </div>
 
           {/* Block 4: Image Card 2 */}
-          <div className="relative rounded-[20px] overflow-hidden shadow-md group min-h-[220px] bg-gf-primary/10">
+          <div className="relative rounded-[20px] overflow-hidden shadow-md group min-h-[240px] h-full bg-gf-primary/10">
             <img
               src="https://images.unsplash.com/photo-1595974482597-4b8da8879bc5?auto=format&fit=crop&w=800&q=80"
-              alt="Smiling Himalayan Organic Farmer"
+              alt="Himalayan Organic Mountain Grower"
               className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-gf-primary/60 via-transparent to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-t from-gf-primary/70 via-transparent to-transparent" />
             <span className="absolute bottom-3 left-4 text-xs font-semibold text-white">
               Farmer-First Partnerships
             </span>
           </div>
 
         </div>
+
 
         {/* ==========================================================================
             2. PRINCIPLES & VALUES SECTION (Greenflow Exact Layout)
@@ -74,22 +75,22 @@ export function CorePrinciples() {
           <div className="lg:col-span-6 grid grid-cols-2 gap-4">
             <div className="col-span-2 relative rounded-[20px] overflow-hidden shadow-md aspect-[16/9] bg-gf-primary/10">
               <img
-                src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=1200&q=80"
-                alt="Organic Agronomists & Quality Lab"
+                src="https://images.unsplash.com/photo-1564890369478-c89ca6d9cde9?auto=format&fit=crop&w=1200&q=80"
+                alt="High-Altitude Misty Orthodox Tea Terraces"
                 className="w-full h-full object-cover"
               />
             </div>
             <div className="relative rounded-[20px] overflow-hidden shadow-md aspect-[4/3] bg-gf-primary/10">
               <img
-                src="https://images.unsplash.com/photo-1530595467537-0b5996c41f2d?auto=format&fit=crop&w=600&q=80"
-                alt="Soil Nutrient Testing"
+                src="https://images.unsplash.com/photo-1599940824399-b87987ceb72a?auto=format&fit=crop&w=600&q=80"
+                alt="Wild Himalayan Timur Spices and Botanicals"
                 className="w-full h-full object-cover"
               />
             </div>
             <div className="relative rounded-[20px] overflow-hidden shadow-md aspect-[4/3] bg-gf-primary/10">
               <img
-                src="https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80"
-                alt="Orthodox Tea Plucking"
+                src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&w=600&q=80"
+                alt="Shade-Grown Himalayan Arabica Coffee Harvest"
                 className="w-full h-full object-cover"
               />
             </div>

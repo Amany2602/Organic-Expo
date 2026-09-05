@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { Star, Quote, CheckCircle2 } from "lucide-react";
+import { Star } from "lucide-react";
 
 const TESTIMONIALS = [
   {
@@ -35,8 +35,8 @@ const TESTIMONIALS = [
 
 export function TestimonialsSpeakers() {
   return (
-    <section className="py-16 sm:py-24 bg-gf-bg-warm">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+    <section className="py-20 lg:py-24 bg-gf-bg-warm border-t border-gf-border">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12 lg:space-y-14">
         
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto space-y-3">
@@ -52,10 +52,10 @@ export function TestimonialsSpeakers() {
 
         {/* 3 Testimonial Cards (Greenflow Exact Layout) */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {TESTIMONIALS.map((item, idx) => (
+          {TESTIMONIALS.map((item) => (
             <div
               key={item.author}
-              className="gf-card p-7 sm:p-8 flex flex-col justify-between space-y-6 hover:border-gf-secondary/50 bg-white"
+              className="gf-card p-7 sm:p-8 flex flex-col justify-between space-y-6 hover:border-gf-secondary/50 bg-white h-full shadow-xs hover:shadow-md"
             >
               <div className="space-y-4">
                 {/* 5-Star Rating */}

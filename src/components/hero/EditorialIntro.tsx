@@ -1,13 +1,14 @@
 "use client";
 
 import React from "react";
-import { ArrowRight, Phone, Award, ShieldCheck, CheckCircle2 } from "lucide-react";
+import { ArrowRight, Phone, Award, ShieldCheck, CheckCircle2, Sprout } from "lucide-react";
+import { RotatingStamp } from "@/components/ui/RotatingStamp";
 
 export function EditorialIntro() {
   return (
-    <section id="about" className="py-16 sm:py-24 bg-white">
+    <section id="about" className="py-20 lg:py-24 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-10 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-14 items-center">
           
           {/* Left Column: Narrative & Action */}
           <div className="lg:col-span-6 space-y-6">
@@ -56,7 +57,7 @@ export function EditorialIntro() {
           {/* Right Column: 2-Photo Composition with Floating Badge & Secretariat Card */}
           <div className="lg:col-span-6 grid grid-cols-1 sm:grid-cols-2 gap-4">
             
-            {/* Left Big Photo with Floating Experience Pill */}
+            {/* Left Big Photo with Floating Experience Pill & Rotating Stamp */}
             <div className="relative rounded-[20px] overflow-hidden shadow-md group aspect-[3/4] sm:aspect-auto bg-gf-primary/10">
               <img
                 src="https://images.unsplash.com/photo-1595974482597-4b8da8879bc5?auto=format&fit=crop&w=800&q=80"
@@ -64,6 +65,15 @@ export function EditorialIntro() {
                 className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-gf-primary/80 via-transparent to-transparent" />
+              
+              {/* Floating Rotating Seal on Photo */}
+              <div className="absolute top-4 right-4 z-20">
+                <RotatingStamp
+                  dark={true}
+                  size={100}
+                  text="• DIRECT SOURCING • 100% ORGANIC • NEPAL •"
+                />
+              </div>
               
               {/* Floating Dark Green Experience Badge */}
               <div className="absolute bottom-4 left-4 right-4 bg-gf-primary/95 backdrop-blur-md text-white p-4 rounded-2xl border border-gf-border-dark shadow-lg">
@@ -85,8 +95,8 @@ export function EditorialIntro() {
               {/* Top Photo: Quality Lab / Inspection */}
               <div className="relative rounded-[20px] overflow-hidden shadow-md group aspect-[4/3] bg-gf-primary/10">
                 <img
-                  src="https://images.unsplash.com/photo-1530595467537-0b5996c41f2d?auto=format&fit=crop&w=800&q=80"
-                  alt="Organic Quality Lab Inspection"
+                  src="https://images.unsplash.com/photo-1576092768241-dec231879fc3?auto=format&fit=crop&w=800&q=80"
+                  alt="High-Altitude Organic Crop Quality Inspection"
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                 />
               </div>

@@ -1,36 +1,36 @@
 "use client";
 
 import React from "react";
-import { ArrowRight, MapPin, Award, CheckCircle2 } from "lucide-react";
+import { ArrowRight, MapPin } from "lucide-react";
 
 const EXHIBITORS = [
   {
-    name: "Ilam High-Altitude Orthodox Tea Collective",
-    region: "Ilam, Eastern Nepal · 2,150m Altitude",
-    category: "Specialty Orthodox & White Tea",
+    name: "Ilam Single-Estate White Needle & Orthodox Tea Guild",
+    region: "Ilam & Dhankuta, Eastern Hills · 2,150m Altitude",
+    category: "Specialty White Needle & First-Flush Tea",
     certifications: ["EU Organic", "USDA NOP", "JAS Japan"],
-    image: "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=800&q=80",
+    image: "https://images.unsplash.com/photo-1576092768241-dec231879fc3?auto=format&fit=crop&w=800&q=80",
   },
   {
-    name: "Mustang Wild Himalayan Herbal Distillers",
-    region: "Mustang & Manang · 3,400m Altitude",
-    category: "Essential Oils & Medicinal Botanicals",
-    certifications: ["Wild-Crafted Certified", "ISO 22000"],
-    image: "https://images.unsplash.com/photo-1610832958506-aa56368176cf?auto=format&fit=crop&w=800&q=80",
+    name: "Mustang & Karnali Wild Botanicals & Essential Distillers",
+    region: "Mustang, Karnali & Humla · 3,400m Altitude",
+    category: "Wild Timur Pepper, Shilajit & Essential Oils",
+    certifications: ["GC/MS Certified", "Wild-Crafted Bio", "ISO 22000"],
+    image: "https://images.unsplash.com/photo-1608686207856-001b95cf60ca?auto=format&fit=crop&w=800&q=80",
   },
   {
-    name: "Karnali Organic Superfoods & Jumla Bean Co-op",
-    region: "Jumla, Karnali Province · 2,600m Altitude",
-    category: "Heritage Grains & Wild Cliff Honey",
-    certifications: ["Nepal Organic Verified", "Fair Trade"],
-    image: "https://images.unsplash.com/photo-1592417817098-8f3d6eb22513?auto=format&fit=crop&w=800&q=80",
+    name: "Annapurna Cliff Honey & Jumla Marsi Grain Collective",
+    region: "Annapurna Foothills & Jumla · 2,600m Altitude",
+    category: "Raw Cliff Honey & Heritage Marsi Red Rice",
+    certifications: ["Pure Pollen Verified", "Nepal Organic", "Fair Trade"],
+    image: "https://images.unsplash.com/photo-1587049352846-4a222e784d38?auto=format&fit=crop&w=800&q=80",
   },
 ];
 
 export function ExhibitorShowcase() {
   return (
-    <section id="exhibitors" className="py-16 sm:py-24 bg-gf-bg-warm">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
+    <section id="exhibitors" className="py-20 lg:py-24 bg-gf-bg-warm border-t border-gf-border">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12 lg:space-y-14">
         
         {/* Header with Title and Right Pill Button */}
         <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-4 border-b border-gf-border pb-6">
@@ -55,7 +55,7 @@ export function ExhibitorShowcase() {
           {EXHIBITORS.map((exhibitor) => (
             <div
               key={exhibitor.name}
-              className="gf-card-dark overflow-hidden flex flex-col justify-between group"
+              className="gf-card-dark overflow-hidden flex flex-col justify-between group h-full shadow-md"
             >
               {/* Top Photo */}
               <div className="relative aspect-[16/10] overflow-hidden bg-gf-dark">

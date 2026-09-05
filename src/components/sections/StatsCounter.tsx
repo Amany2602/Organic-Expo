@@ -22,25 +22,26 @@ export function StatsCounter() {
         </p>
 
         {/* Logo / Badge Row */}
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 sm:gap-6">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3 sm:gap-5">
           {CERTIFICATIONS.map((cert) => {
             const Icon = cert.icon;
             return (
               <div
                 key={cert.name}
-                className="flex flex-col items-center justify-center p-4 rounded-xl bg-gf-bg-warm border border-gf-border hover:border-gf-secondary/40 hover:bg-gf-bg-tint transition-all duration-300 group text-center"
+                className="flex flex-col items-center justify-center p-4 rounded-2xl bg-gf-bg-warm border border-gf-border hover:border-gf-secondary/40 hover:bg-gf-bg-tint transition-all duration-300 group text-center min-h-[108px] h-full shadow-2xs hover:shadow-sm"
               >
-                <Icon className="w-6 h-6 text-gf-text-muted group-hover:text-gf-secondary transition-colors mb-2" />
+                <Icon className="w-5 h-5 text-gf-text-muted group-hover:text-gf-secondary transition-colors mb-2 shrink-0" />
                 <span className="text-xs font-bold text-gf-primary group-hover:text-gf-secondary transition-colors leading-tight">
                   {cert.name}
                 </span>
-                <span className="text-[10px] text-gf-text-muted mt-1 font-medium">
+                <span className="text-[10px] text-gf-text-muted mt-1 font-medium leading-tight">
                   {cert.tag}
                 </span>
               </div>
             );
           })}
         </div>
+
       </div>
     </section>
   );

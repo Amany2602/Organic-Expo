@@ -1,27 +1,85 @@
 "use client";
 
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { ArrowDown, ArrowRight, ShoppingBag, Image as ImageIcon, CreditCard, Sparkles, MapPin, Calendar } from "lucide-react";
+import { RotatingStamp } from "@/components/ui/RotatingStamp";
+
+const HERO_SLIDES = [
+
+  {
+    id: "tea-coffee",
+    title: "Highland Orthodox White Needle Tea & Shade-Grown Arabica",
+    sector: "Pavilion 01 · High Hills",
+    tag: "Ilam & Nuwakot Estates · 2,150m Glacier-Fed Terroir",
+    image: "https://images.unsplash.com/photo-1564890369478-c89ca6d9cde9?auto=format&fit=crop&w=2400&q=85",
+  },
+  {
+    id: "cliff-honey-herbs",
+    title: "Wild Himalayan Cliff Honey & Rare Bio-Active Botanicals",
+    sector: "Pavilion 02 · Alpine Himalayas",
+    tag: "Annapurna & Karnali · Raw Cliff Harvest & Shilajit Purity",
+    image: "https://images.unsplash.com/photo-1587049352846-4a222e784d38?auto=format&fit=crop&w=2400&q=85",
+  },
+  {
+    id: "spices-oils",
+    title: "Wild Timur Pepper, Black Cardamom & Essential Distillates",
+    sector: "Pavilion 03 · Mid-Mountain Valleys",
+    tag: "Mustang, Taplejung & Rolpa · High Citronellal & Cineole",
+    image: "https://images.unsplash.com/photo-1599940824399-b87987ceb72a?auto=format&fit=crop&w=2400&q=85",
+  },
+  {
+    id: "grains-terai",
+    title: "Jumla Marsi Red Rice, Tartary Buckwheat & Terai Aromatic Paddy",
+    sector: "Pavilion 04 · Heritage Belts",
+    tag: "High-Altitude 2,600m Grains & Organic Terai Moringa",
+    image: "https://images.unsplash.com/photo-1586201375761-83865001e31c?auto=format&fit=crop&w=2400&q=85",
+  },
+];
 
 export function ProductionHero() {
+  const [activeSlide, setActiveSlide] = useState(0);
+
+  // Auto-advance slides every 5.5 seconds
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setActiveSlide((prev) => (prev + 1) % HERO_SLIDES.length);
+    }, 5500);
+
+    return () => clearInterval(timer);
+  }, []);
+
   return (
-    <section className="relative w-full h-screen min-h-[650px] max-h-[950px] flex flex-col justify-end overflow-hidden bg-black text-white">
+    <section className="relative w-full min-h-[700px] lg:min-h-[820px] max-h-[1020px] flex flex-col justify-end overflow-hidden bg-black text-white">
       
       {/* ==========================================================================
-          1. FULL-BLEED HIGH-DEPTH PERSPECTIVE BACKGROUND (EcoGrow Style)
+          1. DYNAMIC CINEMATIC MULTI-SLIDE BACKGROUND (Ken Burns & Cross-Fade)
           ========================================================================== */}
-      <div className="absolute inset-0 z-0">
-        <img
-          src="https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?auto=format&fit=crop&w=2600&q=85"
-          alt="Himalayan Organic Agriculture & High-Tech Vertical Farm Perspective"
-          className="w-full h-full object-cover object-center scale-100"
-        />
-        
+      <div className="absolute inset-0 z-0 overflow-hidden">
+        {HERO_SLIDES.map((slide, index) => {
+          const isActive = activeSlide === index;
+          return (
+            <div
+              key={slide.id}
+              className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${
+                isActive ? "opacity-100 z-10" : "opacity-0 z-0 pointer-events-none"
+              }`}
+            >
+              <img
+                src={slide.image}
+                alt={slide.title}
+                className={`w-full h-full object-cover object-center transition-transform duration-[6000ms] ease-out ${
+                  isActive ? "scale-110" : "scale-100"
+                }`}
+              />
+            </div>
+          );
+        })}
+
         {/* Multi-Stop Cinematic Scrim:
-            - Dark top for transparent navbar
-            - Open middle to highlight perspective corridor (60% open space)
-            - Heavy bottom scrim for lower-third typography */}
-        <div className="absolute inset-0 bg-gradient-to-b from-black/75 via-black/15 to-black/90" />
+            - Top dark gradient for transparent navbar
+            - Open middle to highlight perspective visual depth
+            - Deep dark bottom scrim for high-contrast white typography */}
+        <div className="absolute inset-0 z-20 bg-gradient-to-b from-black/80 via-black/20 to-black/95 pointer-events-none" />
       </div>
 
       {/* ==========================================================================
@@ -52,15 +110,26 @@ export function ProductionHero() {
       </div>
 
       {/* ==========================================================================
-          3. LOWER-THIRD DEDICATED CONTENT AREA (EcoGrow Exact Proportions)
+          3. LOWER-THIRD DEDICATED CONTENT AREA
           ========================================================================== */}
-      <div className="relative z-20 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-10 pb-10 sm:pb-14 pt-32">
+      <div className="relative z-30 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-10 pb-8 sm:pb-12 pt-32">
         
-        {/* Overline Eyebrow with proper spacing */}
-        <div className="mb-3 sm:mb-4">
-          <span className="inline-flex items-center gap-2 text-xs sm:text-sm font-bold uppercase tracking-[0.2em] text-white/90 font-sans drop-shadow-md">
-            <span className="w-2 h-2 rounded-full bg-gf-accent-mint inline-block" />
-            1st National Trade Edition · 2026 | Bhrikuti Mandap, Kathmandu
+        {/* Dynamic Sector Tag + Eyebrow */}
+        <div className="flex flex-wrap items-center gap-2.5 sm:gap-4 mb-3 sm:mb-4">
+          <a
+            href="#export-catalog"
+            className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-emerald-700/90 hover:bg-emerald-600 text-white text-[11px] font-bold uppercase tracking-wider shadow-md border border-white/20 backdrop-blur-xs transition-all hover:scale-105"
+          >
+            <span className="w-1.5 h-1.5 rounded-full bg-gf-peach animate-pulse" />
+            <span>🌏 Global Sourcing & Export Desk Open</span>
+          </a>
+
+          <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-gf-secondary text-white text-[11px] font-bold uppercase tracking-wider shadow-md">
+            {HERO_SLIDES[activeSlide].sector}
+          </span>
+
+          <span className="text-xs sm:text-sm font-bold uppercase tracking-[0.14em] text-white/90 font-sans drop-shadow-md hidden sm:inline">
+            1st National Trade Edition · 2026 | Kathmandu
           </span>
         </div>
 
@@ -68,41 +137,86 @@ export function ProductionHero() {
         <div className="flex flex-col lg:flex-row justify-between items-start lg:items-end gap-6 lg:gap-10">
           
           <div className="space-y-4 max-w-3xl">
-            {/* Proportionate Display Headline (2 Concise Lines) */}
+            {/* Proportionate Display Headline */}
             <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-[4.2rem] font-black uppercase tracking-tight leading-[1.02] text-white drop-shadow-[0_8px_30px_rgba(0,0,0,0.8)]">
               Connecting Nepal Organic <br className="hidden sm:inline" />
               <span className="text-white">Products To World Markets</span>
             </h1>
 
-            {/* Sub-copy & Dual CTAs */}
+            {/* Dynamic Active Sector Name */}
+            <p className="text-xs sm:text-sm text-gf-peach font-semibold tracking-wide transition-all duration-500">
+              Focus: {HERO_SLIDES[activeSlide].title} · {HERO_SLIDES[activeSlide].tag}
+            </p>
+
+            {/* CTAs */}
             <div className="flex flex-wrap items-center gap-3 pt-1">
               <a
-                href="#pricing"
-                className="gf-btn-primary py-3 px-7 text-xs sm:text-sm font-bold uppercase tracking-wider shadow-xl hover:scale-105 transition-all"
+                href="#export-catalog"
+                className="gf-btn-primary py-3 px-7 text-xs sm:text-sm font-bold uppercase tracking-wider shadow-xl hover:scale-105 transition-all flex items-center gap-2"
               >
-                <span>Book Exhibition Stall</span>
+                <span>Explore B2B Export Catalog</span>
                 <ArrowRight className="w-4 h-4" />
               </a>
 
               <a
-                href="#process"
+                href="#pricing"
                 className="inline-flex items-center justify-center gap-2 py-3 px-6 rounded-full bg-white/10 hover:bg-white/20 text-white border border-white/25 backdrop-blur-md text-xs sm:text-sm font-bold uppercase tracking-wider transition-all hover:scale-105"
               >
-                <span>Buyer Pass Registration</span>
+                <span>Book Exhibition Stall</span>
+              </a>
+
+              <a
+                href="#trade-hub"
+                className="inline-flex items-center justify-center gap-1.5 py-3 px-4 rounded-full bg-black/40 hover:bg-black/60 text-gray-200 border border-white/15 text-xs font-semibold tracking-wide transition-all hover:text-white"
+              >
+                <span>Incoterms & Logistics ↗</span>
               </a>
             </div>
           </div>
 
-          {/* Bottom Right Scroll Down Indicator */}
-          <a
-            href="#about"
-            className="flex items-center gap-2 text-xs sm:text-sm font-bold uppercase tracking-widest text-white/90 hover:text-white transition-colors pb-2 cursor-pointer group shrink-0"
-          >
-            <span>Scroll Down</span>
-            <div className="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center group-hover:bg-gf-secondary transition-colors">
-              <ArrowDown className="w-4 h-4 group-hover:translate-y-0.5 transition-transform animate-bounce" />
+          {/* Bottom Right: Rotating Stamp + Slide Progress Navigation + Scroll Down */}
+          <div className="flex flex-col items-start lg:items-end gap-5 w-full lg:w-auto">
+            
+            {/* EcoGrow Style Rotating Stamp Floating Badge */}
+            <div className="hidden sm:block">
+              <RotatingStamp
+                dark={true}
+                size={120}
+                text="• 100% CERTIFIED ORGANIC • HIMALAYAN EXPO • 2026 •"
+              />
             </div>
-          </a>
+
+            {/* 4-Sector Slide Progress Navigation Bars */}
+            <div className="flex items-center gap-2">
+              {HERO_SLIDES.map((slide, idx) => {
+                const isActive = activeSlide === idx;
+                return (
+                  <button
+                    key={slide.id}
+                    type="button"
+                    onClick={() => setActiveSlide(idx)}
+                    className={`h-2 rounded-full transition-all duration-500 cursor-pointer ${
+                      isActive ? "w-8 bg-gf-accent-mint" : "w-3 bg-white/30 hover:bg-white/60"
+                    }`}
+                    aria-label={`Jump to slide ${idx + 1}: ${slide.title}`}
+                  />
+                );
+              })}
+            </div>
+
+            {/* Scroll Down Indicator */}
+            <a
+              href="#about"
+              className="flex items-center gap-2 text-xs sm:text-sm font-bold uppercase tracking-widest text-white/90 hover:text-white transition-colors cursor-pointer group shrink-0"
+            >
+              <span>Scroll Down</span>
+              <div className="w-7 h-7 rounded-full bg-white/10 flex items-center justify-center group-hover:bg-gf-secondary transition-colors">
+                <ArrowDown className="w-3.5 h-3.5 group-hover:translate-y-0.5 transition-transform animate-bounce" />
+              </div>
+            </a>
+
+          </div>
+
 
         </div>
 

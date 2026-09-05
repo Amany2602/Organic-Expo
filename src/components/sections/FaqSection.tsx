@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import { ChevronDown, HelpCircle, ArrowRight } from "lucide-react";
+import { ChevronDown } from "lucide-react";
 
 const FAQS = [
   {
@@ -44,8 +44,8 @@ export function FaqSection() {
   };
 
   return (
-    <section id="faq" className="py-16 sm:py-24 bg-gf-bg-warm">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
+    <section id="faq" className="py-20 lg:py-24 bg-gf-bg-warm border-t border-gf-border">
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
         
         {/* Header */}
         <div className="text-center space-y-3">

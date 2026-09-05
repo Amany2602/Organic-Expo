@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { Check, Sparkles, ArrowRight, ShieldCheck } from "lucide-react";
+import { Check, ArrowRight } from "lucide-react";
 
 const TIERS = [
   {
@@ -60,8 +60,8 @@ const TIERS = [
 
 export function PricingSection() {
   return (
-    <section id="pricing" className="py-16 sm:py-24 bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+    <section id="pricing" className="py-20 lg:py-24 bg-white border-t border-gf-border">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12 lg:space-y-14">
         
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto space-y-4">
@@ -82,14 +82,14 @@ export function PricingSection() {
             return (
               <div
                 key={tier.id}
-                className={`rounded-[20px] p-8 flex flex-col justify-between transition-all duration-300 relative ${
+                className={`rounded-[20px] p-8 flex flex-col justify-between transition-all duration-300 relative h-full ${
                   isPopular
-                    ? "bg-gf-primary text-white border-2 border-gf-secondary shadow-xl -translate-y-2"
-                    : "bg-white text-gf-text border border-gf-border shadow-sm hover:border-gf-secondary/40 hover:shadow-md"
+                    ? "bg-gf-primary text-white border-2 border-gf-secondary shadow-xl lg:-translate-y-2"
+                    : "bg-white text-gf-text border border-gf-border shadow-xs hover:border-gf-secondary/40 hover:shadow-md"
                 }`}
               >
                 {isPopular && (
-                  <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-gf-secondary text-white text-[11px] font-bold uppercase tracking-wider px-4 py-1 rounded-full shadow-md">
+                  <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-gf-secondary text-white text-[11px] font-bold uppercase tracking-wider px-4 py-1 rounded-full shadow-md whitespace-nowrap">
                     Most Popular Choice
                   </div>
                 )}

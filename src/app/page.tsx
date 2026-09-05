@@ -4,7 +4,11 @@ import { Footer } from "@/components/layout/Footer";
 import { ProductionHero } from "@/components/hero/ProductionHero";
 import { StatsCounter } from "@/components/sections/StatsCounter";
 import { EditorialIntro } from "@/components/hero/EditorialIntro";
+import { B2BTradeShowcase } from "@/components/sections/B2BTradeShowcase";
+import { GlobalTradeHub } from "@/components/sections/GlobalTradeHub";
 import { PavilionsGrid } from "@/components/sections/PavilionsGrid";
+import { HarvestCalendar } from "@/components/sections/HarvestCalendar";
+import { AgriTechExplorer } from "@/components/sections/AgriTechExplorer";
 import { ValuePillars } from "@/components/sections/ValuePillars";
 import { CorePrinciples } from "@/components/sections/CorePrinciples";
 import { ProcessTimeline } from "@/components/sections/ProcessTimeline";
@@ -14,6 +18,7 @@ import { TestimonialsSpeakers } from "@/components/sections/TestimonialsSpeakers
 import { InsightsGrid } from "@/components/sections/InsightsGrid";
 import { FaqSection } from "@/components/sections/FaqSection";
 import { LeadCtaSection } from "@/components/sections/LeadCtaSection";
+import { FloatingSecretariatDock } from "@/components/ui/FloatingSecretariatDock";
 
 export default function Home() {
   return (
@@ -29,11 +34,23 @@ export default function Home() {
         {/* Certified Standards & Trust Marquee */}
         <StatsCounter />
 
-        {/* About Section: 2-Photo Split + Floating 7-Province Experience Badge */}
+        {/* About Section: 2-Photo Split + Floating 7-Province Experience Badge & Rotating Seal */}
         <EditorialIntro />
+
+        {/* 01. FLAGSHIP B2B ENGINE: Certified Commodities, Industrial Hemp & Raw Materials Catalog */}
+        <B2BTradeShowcase />
+
+        {/* 02. GLOBAL EXPORT HUB: Incoterms, Dual Air/Sea Logistics, Lab Testing & Trade Finance */}
+        <GlobalTradeHub />
 
         {/* 4 Flagship Commodity Pavilions (Asymmetric Bento Grid) */}
         <PavilionsGrid />
+
+        {/* EcoGrow Signature: Himalayan Seasonal Yield & Harvest Matrix */}
+        <HarvestCalendar />
+
+        {/* EcoGrow Signature: Himalayan Agritech & Terroir Science Showcase */}
+        <AgriTechExplorer />
 
         {/* Why Attend: 4 Numbered Trade & Sourcing Pillars (01–04) */}
         <ValuePillars />
@@ -63,7 +80,10 @@ export default function Home() {
         <LeadCtaSection />
       </main>
 
-      {/* 03. 4-Column Corporate Footer */}
+      {/* 03. Floating Live Help & Secretariat Desk (EcoGrow Dock) */}
+      <FloatingSecretariatDock />
+
+      {/* 04. 4-Column Corporate Footer */}
       <Footer />
     </div>
   );

@@ -5,32 +5,32 @@ import { ArrowRight, Calendar, BookOpen } from "lucide-react";
 
 const ARTICLES = [
   {
-    title: "Complete Compliance Guide to Exporting Himalayan Teas & Herbs to the EU",
+    title: "Complete Compliance Guide: Exporting Himalayan Teas & Botanicals to EU & US Markets",
     date: "March 2026",
     category: "Export & Regulatory",
     readTime: "6 min read",
-    image: "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=800&q=80",
+    image: "https://images.unsplash.com/photo-1564890369478-c89ca6d9cde9?auto=format&fit=crop&w=800&q=80",
   },
   {
-    title: "Why Nepal's High-Altitude Terroir Produces Superior Medicinal Bioactives",
+    title: "Why Nepal's High-Altitude Alpine Terroir Yields Maximum Medicinal Bioactives",
     date: "March 2026",
     category: "Terroir & Agronomy",
     readTime: "8 min read",
-    image: "https://images.unsplash.com/photo-1610832958506-aa56368176cf?auto=format&fit=crop&w=800&q=80",
+    image: "https://images.unsplash.com/photo-1608686207856-001b95cf60ca?auto=format&fit=crop&w=800&q=80",
   },
   {
-    title: "The Rise of Single-Estate Himalayan Specialty Arabica in Global Markets",
+    title: "Global Demand Surge: Wild Himalayan Cliff Honey & Jumla Heritage Superfoods",
     date: "March 2026",
     category: "Market Intelligence",
     readTime: "5 min read",
-    image: "https://images.unsplash.com/photo-1500651230702-0e2d8a49d4ad?auto=format&fit=crop&w=800&q=80",
+    image: "https://images.unsplash.com/photo-1587049352846-4a222e784d38?auto=format&fit=crop&w=800&q=80",
   },
 ];
 
 export function InsightsGrid() {
   return (
-    <section id="insights" className="py-16 sm:py-24 bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
+    <section id="insights" className="py-20 lg:py-24 bg-white border-t border-gf-border">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12 lg:space-y-14">
         
         {/* Header with Title and Right Pill Button */}
         <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-4 border-b border-gf-border pb-6">
