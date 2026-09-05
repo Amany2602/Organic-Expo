@@ -27,7 +27,7 @@ export function PavilionsGrid() {
           {/* Card 1 (Full-Width Top Hero Card) */}
           <div className="relative rounded-[20px] overflow-hidden shadow-md group min-h-[340px] sm:min-h-[380px] flex items-end p-6 sm:p-10 bg-gf-primary">
             <img
-              src="https://images.unsplash.com/photo-1576092768241-dec231879fc3?auto=format&fit=crop&w=1600&q=80"
+              src="https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=1600&q=80"
               alt="Highland Orthodox White Needle Tea and Shade-Grown Arabica Coffee"
               className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-40"
             />
@@ -64,7 +64,7 @@ export function PavilionsGrid() {
             {/* Card 2 (Left) */}
             <div className="relative rounded-[20px] overflow-hidden shadow-md group min-h-[350px] sm:min-h-[360px] flex items-end p-6 sm:p-8 bg-gf-primary">
               <img
-                src="https://images.unsplash.com/photo-1608686207856-001b95cf60ca?auto=format&fit=crop&w=1000&q=80"
+                src="https://images.unsplash.com/photo-1512069772995-ec65ed45afd6?auto=format&fit=crop&w=1000&q=80"
                 alt="Wild Himalayan Botanicals, Timur Pepper and Essential Distillates"
                 className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-40"
               />
@@ -98,7 +98,7 @@ export function PavilionsGrid() {
             {/* Card 3 (Right) */}
             <div className="relative rounded-[20px] overflow-hidden shadow-md group min-h-[350px] sm:min-h-[360px] flex items-end p-6 sm:p-8 bg-gf-primary">
               <img
-                src="https://images.unsplash.com/photo-1587049352846-4a222e784d38?auto=format&fit=crop&w=1000&q=80"
+                src="https://images.unsplash.com/photo-1558642452-9d2a7deb7f62?auto=format&fit=crop&w=1000&q=80"
                 alt="Wild Himalayan Cliff Honey & Ancient Superfoods"
                 className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-40"
               />
@@ -134,7 +134,7 @@ export function PavilionsGrid() {
           {/* Card 4 (Full-Width Bottom Card) */}
           <div className="relative rounded-[20px] overflow-hidden shadow-md group min-h-[320px] sm:min-h-[340px] flex items-end p-6 sm:p-10 bg-gf-primary">
             <img
-              src="https://images.unsplash.com/photo-1500937386664-56d1dfef3854?auto=format&fit=crop&w=1600&q=80"
+              src="https://images.unsplash.com/photo-1625246333195-78d9c38ad449?auto=format&fit=crop&w=1600&q=80"
               alt="Terai Heritage Agriculture, Black Cardamom and Global Bio-Certification"
               className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-35"
             />

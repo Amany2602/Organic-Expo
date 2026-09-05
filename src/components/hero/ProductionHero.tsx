@@ -32,7 +32,7 @@ const HERO_SLIDES = [
     title: "Jumla Marsi Red Rice, Tartary Buckwheat & Terai Aromatic Paddy",
     sector: "Pavilion 04 · Heritage Belts",
     tag: "High-Altitude 2,600m Grains & Organic Terai Moringa",
-    image: "https://images.unsplash.com/photo-1586201375761-83865001e31c?auto=format&fit=crop&w=2400&q=85",
+    image: "https://images.unsplash.com/photo-1500937386664-56d1dfef3854?auto=format&fit=crop&w=2400&q=85",
   },
 ];
 

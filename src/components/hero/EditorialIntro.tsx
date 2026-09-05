@@ -95,7 +95,7 @@ export function EditorialIntro() {
               {/* Top Photo: Quality Lab / Inspection */}
               <div className="relative rounded-[20px] overflow-hidden shadow-md group aspect-[4/3] bg-gf-primary/10">
                 <img
-                  src="https://images.unsplash.com/photo-1576092768241-dec231879fc3?auto=format&fit=crop&w=800&q=80"
+                  src="https://images.unsplash.com/photo-1589923188900-85dae523342b?auto=format&fit=crop&w=800&q=80"
                   alt="High-Altitude Organic Crop Quality Inspection"
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                 />

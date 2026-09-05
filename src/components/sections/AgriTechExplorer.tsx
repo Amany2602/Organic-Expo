@@ -36,7 +36,7 @@ const TECH_PILLARS: TechPillar[] = [
       "Rich volcanic and humus-laden sub-Himalayan topsoils",
       "Traditional multi-century terracing with zero synthetic fertilizers",
     ],
-    image: "https://images.unsplash.com/photo-1500937386664-56d1dfef3854?auto=format&fit=crop&w=1000&q=80",
+    image: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1000&q=80",
   },
   {
     id: "permaculture",
@@ -56,7 +56,7 @@ const TECH_PILLARS: TechPillar[] = [
       "On-farm compost and cow dung bio-digester nutrient cycles",
       "Preservation of ancient indigenous seed varieties & wild strains",
     ],
-    image: "https://images.unsplash.com/photo-1595974482597-4b8da8879bc5?auto=format&fit=crop&w=1000&q=80",
+    image: "https://images.unsplash.com/photo-1500651230702-0e2d8a49d4ad?auto=format&fit=crop&w=1000&q=80",
   },
   {
     id: "distillation",
@@ -76,7 +76,7 @@ const TECH_PILLARS: TechPillar[] = [
       "Heavy metal, micro-toxin, and pesticide residue negative guarantee",
       "Pre-shipment phytosanitary quarantine compliance for EU, US & Japan",
     ],
-    image: "https://images.unsplash.com/photo-1576092768241-dec231879fc3?auto=format&fit=crop&w=1000&q=80",
+    image: "https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?auto=format&fit=crop&w=1000&q=80",
   },
   {
     id: "fair-trade",
@@ -96,7 +96,7 @@ const TECH_PILLARS: TechPillar[] = [
       "Cooperative reinvestment funds for organic certification renewal",
       "Youth agricultural retention and Himalayan rural livelihood security",
     ],
-    image: "https://images.unsplash.com/photo-1586201375761-83865001e31c?auto=format&fit=crop&w=1000&q=80",
+    image: "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&w=1000&q=80",
   },
 ];
 

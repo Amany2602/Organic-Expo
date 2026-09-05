@@ -32,7 +32,7 @@ const HARVEST_DATA: HarvestItem[] = [
     volume: "18.5 Metric Tons",
     moisture: "< 4.8% Moisture",
     keyCompounds: "High EGCG Antioxidants & Floral Theanine",
-    image: "https://images.unsplash.com/photo-1564890369478-c89ca6d9cde9?auto=format&fit=crop&w=800&q=80",
+    image: "https://images.unsplash.com/photo-1544717302-de2939b7ef71?auto=format&fit=crop&w=800&q=80",
   },
   {
     id: "arabica-coffee",
@@ -46,7 +46,7 @@ const HARVEST_DATA: HarvestItem[] = [
     volume: "35.0 Metric Tons",
     moisture: "10.5% - 11.2%",
     keyCompounds: "Cupping Score 87.5+ · Citrus & Honey Notes",
-    image: "https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&w=800&q=80",
+    image: "https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=800&q=80",
   },
   {
     id: "cliff-honey",
@@ -60,7 +60,7 @@ const HARVEST_DATA: HarvestItem[] = [
     volume: "8.2 Metric Tons",
     moisture: "< 17.5% Natural Moisture",
     keyCompounds: "High Bioactive Enzymes & Grayanotoxin Purity",
-    image: "https://images.unsplash.com/photo-1587049352846-4a222e784d38?auto=format&fit=crop&w=800&q=80",
+    image: "https://images.unsplash.com/photo-1582845512747-e42001c95638?auto=format&fit=crop&w=800&q=80",
   },
   {
     id: "timur-pepper",
@@ -74,7 +74,7 @@ const HARVEST_DATA: HarvestItem[] = [
     volume: "42.0 Metric Tons",
     moisture: "< 9.0% Sun-Dried",
     keyCompounds: "5.8% Volatile Essential Oil · High Citronellal",
-    image: "https://images.unsplash.com/photo-1599940824399-b87987ceb72a?auto=format&fit=crop&w=800&q=80",
+    image: "https://images.unsplash.com/photo-1596040033229-a9821ebd058d?auto=format&fit=crop&w=800&q=80",
   },
   {
     id: "black-cardamom",
@@ -88,7 +88,7 @@ const HARVEST_DATA: HarvestItem[] = [
     volume: "85.0 Metric Tons",
     moisture: "< 11.0% Moisture",
     keyCompounds: "3.2% 1,8-Cineole Oil · Bold 22mm+ Pods",
-    image: "https://images.unsplash.com/photo-1500937386664-56d1dfef3854?auto=format&fit=crop&w=800&q=80",
+    image: "https://images.unsplash.com/photo-1509358271058-acd22cc93898?auto=format&fit=crop&w=800&q=80",
   },
   {
     id: "marsi-rice",
@@ -102,7 +102,7 @@ const HARVEST_DATA: HarvestItem[] = [
     volume: "60.0 Metric Tons",
     moisture: "12.0% Equilibrium",
     keyCompounds: "Rich in Anthocyanin, Iron & Dietary Fiber",
-    image: "https://images.unsplash.com/photo-1586201375761-83865001e31c?auto=format&fit=crop&w=800&q=80",
+    image: "https://images.unsplash.com/photo-1536304929831-ee1ca9d44906?auto=format&fit=crop&w=800&q=80",
   },
 ];
 

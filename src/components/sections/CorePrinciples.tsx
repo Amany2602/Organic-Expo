@@ -28,7 +28,7 @@ export function CorePrinciples() {
           {/* Block 2: Image Card 1 */}
           <div className="relative rounded-[20px] overflow-hidden shadow-md group min-h-[240px] h-full bg-gf-primary/10">
             <img
-              src="https://images.unsplash.com/photo-1500937386664-56d1dfef3854?auto=format&fit=crop&w=800&q=80"
+              src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=800&q=80"
               alt="Himalayan Mountain Agricultural Terraces"
               className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
             />
@@ -53,8 +53,8 @@ export function CorePrinciples() {
           {/* Block 4: Image Card 2 */}
           <div className="relative rounded-[20px] overflow-hidden shadow-md group min-h-[240px] h-full bg-gf-primary/10">
             <img
-              src="https://images.unsplash.com/photo-1595974482597-4b8da8879bc5?auto=format&fit=crop&w=800&q=80"
-              alt="Himalayan Organic Mountain Grower"
+              src="https://images.unsplash.com/photo-1593113598332-cd288d649433?auto=format&fit=crop&w=800&q=80"
+              alt="Himalayan Organic Mountain Grower Cooperative"
               className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-gf-primary/70 via-transparent to-transparent" />
@@ -75,14 +75,14 @@ export function CorePrinciples() {
           <div className="lg:col-span-6 grid grid-cols-2 gap-4">
             <div className="col-span-2 relative rounded-[20px] overflow-hidden shadow-md aspect-[16/9] bg-gf-primary/10">
               <img
-                src="https://images.unsplash.com/photo-1564890369478-c89ca6d9cde9?auto=format&fit=crop&w=1200&q=80"
+                src="https://images.unsplash.com/photo-1535090467336-9501f96eef89?auto=format&fit=crop&w=1200&q=80"
                 alt="High-Altitude Misty Orthodox Tea Terraces"
                 className="w-full h-full object-cover"
               />
             </div>
             <div className="relative rounded-[20px] overflow-hidden shadow-md aspect-[4/3] bg-gf-primary/10">
               <img
-                src="https://images.unsplash.com/photo-1599940824399-b87987ceb72a?auto=format&fit=crop&w=600&q=80"
+                src="https://images.unsplash.com/photo-1505253716362-afaea1d3d1af?auto=format&fit=crop&w=600&q=80"
                 alt="Wild Himalayan Timur Spices and Botanicals"
                 className="w-full h-full object-cover"
               />

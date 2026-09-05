@@ -9,21 +9,21 @@ const EXHIBITORS = [
     region: "Ilam & Dhankuta, Eastern Hills · 2,150m Altitude",
     category: "Specialty White Needle & First-Flush Tea",
     certifications: ["EU Organic", "USDA NOP", "JAS Japan"],
-    image: "https://images.unsplash.com/photo-1576092768241-dec231879fc3?auto=format&fit=crop&w=800&q=80",
+    image: "https://images.unsplash.com/photo-1576092762791-dd9e2220abd1?auto=format&fit=crop&w=800&q=80",
   },
   {
     name: "Mustang & Karnali Wild Botanicals & Essential Distillers",
     region: "Mustang, Karnali & Humla · 3,400m Altitude",
     category: "Wild Timur Pepper, Shilajit & Essential Oils",
     certifications: ["GC/MS Certified", "Wild-Crafted Bio", "ISO 22000"],
-    image: "https://images.unsplash.com/photo-1608686207856-001b95cf60ca?auto=format&fit=crop&w=800&q=80",
+    image: "https://images.unsplash.com/photo-1515694346937-94d85e41e6f0?auto=format&fit=crop&w=800&q=80",
   },
   {
     name: "Annapurna Cliff Honey & Jumla Marsi Grain Collective",
     region: "Annapurna Foothills & Jumla · 2,600m Altitude",
     category: "Raw Cliff Honey & Heritage Marsi Red Rice",
     certifications: ["Pure Pollen Verified", "Nepal Organic", "Fair Trade"],
-    image: "https://images.unsplash.com/photo-1587049352846-4a222e784d38?auto=format&fit=crop&w=800&q=80",
+    image: "https://images.unsplash.com/photo-1471943311424-646960669fbc?auto=format&fit=crop&w=800&q=80",
   },
 ];
 

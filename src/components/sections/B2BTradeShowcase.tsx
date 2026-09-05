@@ -275,7 +275,7 @@ const B2B_PRODUCTS: B2BProduct[] = [
       { label: "Purity Grade", value: "Stem-Cleaned (Grade AAA)" }
     ],
     certifications: ["EU Bio Certified", "USDA Organic", "Pesticide Screened"],
-    image: "https://images.unsplash.com/photo-1599940824399-b87987ceb72a?auto=format&fit=crop&w=800&q=80",
+    image: "https://images.unsplash.com/photo-1608686207856-001b95cf60ca?auto=format&fit=crop&w=800&q=80",
     badge: "Signature Terroir",
     isPopular: true
   },
@@ -298,7 +298,7 @@ const B2B_PRODUCTS: B2BProduct[] = [
       { label: "Foreign Matter", value: "< 0.5%" }
     ],
     certifications: ["Spices Board Grade 1", "Phytosanitary Clean", "USDA Organic"],
-    image: "https://images.unsplash.com/photo-1509358271058-acd22cc93898?auto=format&fit=crop&w=800&q=80",
+    image: "https://images.unsplash.com/photo-1514733670139-4d87a1941d55?auto=format&fit=crop&w=800&q=80",
     badge: "Top Commercial"
   },
   {
@@ -320,7 +320,7 @@ const B2B_PRODUCTS: B2BProduct[] = [
       { label: "Heavy Metal Screen", value: "Eurofins Passed" }
     ],
     certifications: ["Ayurvedic GMP", "Heavy Metal Tested", "EU/US Lab COA"],
-    image: "https://images.unsplash.com/photo-1615485290382-441e4d049cb5?auto=format&fit=crop&w=800&q=80",
+    image: "https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&w=800&q=80",
     badge: "Ultra-Pure"
   },
   {
@@ -342,7 +342,7 @@ const B2B_PRODUCTS: B2BProduct[] = [
       { label: "Flash Point", value: "96°C" }
     ],
     certifications: ["100% Pure IFRA Compliant", "ISO 9001:2015", "EU CPNP"],
-    image: "https://images.unsplash.com/photo-1608686207856-001b95cf60ca?auto=format&fit=crop&w=800&q=80",
+    image: "https://images.unsplash.com/photo-1601049541289-9b1b7bbbfe19?auto=format&fit=crop&w=800&q=80",
     badge: "Pharma Grade"
   },
 
@@ -368,7 +368,7 @@ const B2B_PRODUCTS: B2BProduct[] = [
       { label: "Leaf Grade", value: "Silver Tips / Imperial" }
     ],
     certifications: ["EU Bio Certified", "USDA Organic", "JAS Japan"],
-    image: "https://images.unsplash.com/photo-1576092768241-dec231879fc3?auto=format&fit=crop&w=800&q=80",
+    image: "https://images.unsplash.com/photo-1559525839-b184a4d698c7?auto=format&fit=crop&w=800&q=80",
     badge: "Master Reserve",
     isPopular: true
   },
@@ -391,7 +391,7 @@ const B2B_PRODUCTS: B2BProduct[] = [
       { label: "Moisture Level", value: "10.5% – 11.5%" }
     ],
     certifications: ["Rainforest Compatible", "SCA Specialty Certified"],
-    image: "https://images.unsplash.com/photo-1559525839-b184a4d698c7?auto=format&fit=crop&w=800&q=80",
+    image: "https://images.unsplash.com/photo-1447933601403-0c6688de566e?auto=format&fit=crop&w=800&q=80",
     badge: "SCA 86.5+"
   },
   {
@@ -413,7 +413,7 @@ const B2B_PRODUCTS: B2BProduct[] = [
       { label: "Diastase Activity", value: "> 18 DN Units" }
     ],
     certifications: ["Wild Harvest Cert", "DNA Authenticated", "Phytosanitary Clean"],
-    image: "https://images.unsplash.com/photo-1587049352846-4a222e784d38?auto=format&fit=crop&w=800&q=80",
+    image: "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&fit=crop&w=800&q=80",
     badge: "Rare Harvest"
   },
   {
@@ -435,7 +435,7 @@ const B2B_PRODUCTS: B2BProduct[] = [
       { label: "Irrigation", value: "Pure Glacial Water" }
     ],
     certifications: ["GI Tag Nepal", "100% Pesticide Free"],
-    image: "https://images.unsplash.com/photo-1536304929831-ee1ca9d44906?auto=format&fit=crop&w=800&q=80",
+    image: "https://images.unsplash.com/photo-1574323347407-f5e1ad6d020b?auto=format&fit=crop&w=800&q=80",
     badge: "Heritage"
   }
 ];

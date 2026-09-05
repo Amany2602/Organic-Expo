@@ -9,21 +9,21 @@ const ARTICLES = [
     date: "March 2026",
     category: "Export & Regulatory",
     readTime: "6 min read",
-    image: "https://images.unsplash.com/photo-1564890369478-c89ca6d9cde9?auto=format&fit=crop&w=800&q=80",
+    image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=800&q=80",
   },
   {
     title: "Why Nepal's High-Altitude Alpine Terroir Yields Maximum Medicinal Bioactives",
     date: "March 2026",
     category: "Terroir & Agronomy",
     readTime: "8 min read",
-    image: "https://images.unsplash.com/photo-1608686207856-001b95cf60ca?auto=format&fit=crop&w=800&q=80",
+    image: "https://images.unsplash.com/photo-1518531933037-91b2f5f229cc?auto=format&fit=crop&w=800&q=80",
   },
   {
     title: "Global Demand Surge: Wild Himalayan Cliff Honey & Jumla Heritage Superfoods",
     date: "March 2026",
     category: "Market Intelligence",
     readTime: "5 min read",
-    image: "https://images.unsplash.com/photo-1587049352846-4a222e784d38?auto=format&fit=crop&w=800&q=80",
+    image: "https://images.unsplash.com/photo-1488459716781-31db52582fe9?auto=format&fit=crop&w=800&q=80",
   },
 ];
 
